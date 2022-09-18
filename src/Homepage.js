@@ -118,8 +118,9 @@ class BriefAboutMe extends React.Component {
         <img className="GraduationPhoto" src={gradPhoto} alt="Me from graduation" />
         <div className="Intro">
           <p><b>
-            I'm a first year Mechatronics Engineering student at the University of Waterloo. I have a passion for engineering
-            and am a experience programmer, fluent in Java, Python and JavaScript. 
+            I'm a first year Mechatronics Engineering student at the University of Waterloo. I have a passion for robotics and
+            engineering. I'm an experienced programmer, fluent in Java and Python. I have also have some experience with React, JavaScript and C++. 
+            <br/>Continue down below to see some of my projects!
           </b>
           </p>
         </div>
