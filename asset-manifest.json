@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.129d1b95.css",
+    "main.js": "/static/js/main.9028a3f1.js",
+    "static/js/787.bbe01249.chunk.js": "/static/js/787.bbe01249.chunk.js",
+    "static/media/graduationphoto.JPEG": "/static/media/graduationphoto.aad16015cdc06fe372b7.JPEG",
+    "static/media/ghostsurvival.jpg": "/static/media/ghostsurvival.a01087341778a17fdf60.jpg",
+    "static/media/binarysortvislogo.jpg": "/static/media/binarysortvislogo.92d7dfd7f15839117816.jpg",
+    "static/media/chesspluspluslogo.jpg": "/static/media/chesspluspluslogo.cfcae3dbe70c0e66fc3b.jpg",
+    "index.html": "/index.html",
+    "main.129d1b95.css.map": "/static/css/main.129d1b95.css.map",
+    "main.9028a3f1.js.map": "/static/js/main.9028a3f1.js.map",
+    "787.bbe01249.chunk.js.map": "/static/js/787.bbe01249.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.129d1b95.css",
+    "static/js/main.9028a3f1.js"
+  ]
+}
