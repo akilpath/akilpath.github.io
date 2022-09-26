@@ -29,7 +29,7 @@ class Homepage extends React.Component {
     }, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5
+      threshold: 1.0
     })
 
     observer.observe(this.headerRef.current);
@@ -115,6 +115,7 @@ class BriefAboutMe extends React.Component {
   render() {
     return (
       <div className={"BriefAboutMe"} ref = {this.ref}>
+        
         <img className="GraduationPhoto" src={gradPhoto} alt="Me from graduation" />
         <div className="Intro">
           <p><b>
