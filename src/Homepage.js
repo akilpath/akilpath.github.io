@@ -42,8 +42,7 @@ class Homepage extends React.Component {
     return (
       <div className="Homepage">
         <header className={"Homepage-header"} ref = {this.headerRef}>
-          <h1>Hey!</h1>
-          <h1>I'm Akil</h1>
+          <h1>Hey!<h1 className = {"MyName"}>I'm Akil</h1></h1>
           {/*<NavigationBar />*/}
         </header>
         <BriefAboutMe refProp = {this.briefAboutMeRef}/>
@@ -75,6 +74,11 @@ class Homepage extends React.Component {
           links={[
           ]}
           linkMessages={[
+          ]}
+          backgroundColors = {[
+            "#ff6766",
+            "#900b0c",
+            "#16dffd",
           ]}
         />
       </div>
@@ -111,18 +115,27 @@ class BriefAboutMe extends React.Component {
     this.ref = this.props.refProp
   }
 
-
   render() {
     return (
       <div className={"BriefAboutMe"} ref = {this.ref}>
         
         <img className="GraduationPhoto" src={gradPhoto} alt="Me from graduation" />
         <div className="Intro">
-          <p><b>
-            I'm a first year Mechatronics Engineering student at the University of Waterloo. I have a passion for robotics and
-            engineering. I'm an experienced programmer, fluent in Java and Python. I have also have some experience with React, JavaScript and C++. 
-            <br/>Continue down below to see some of my projects!
-          </b>
+          <p>
+            I'm a first year Mechatronics Engineering student at the University of Waterloo. 
+            <br/>
+            <br/>
+            I have a passion for robotics and
+            engineering and I love to take on new projects and challenges.
+            <br/>
+            <br/>
+            I'm experienced in Java, Python and C++. I also built this website using React.js!
+            I was a senior programmer for Team 5409 in the 2022 season, and am returning as a programming mentor for this upcoming 2023 season.
+            <br/>
+            <br/>
+            <b>
+            Continue down below to see some of my projects!
+            </b>
           </p>
         </div>
       </div>
@@ -134,7 +147,6 @@ class Cards extends React.Component {
   constructor(props) {
     super(props);
     this.titles = props.titles.slice();
-    this.descriptions = props.descriptions.slice();
     this.positionEnd = props.descriptions.length - 1;
     this.state = {
       pos: 0,
@@ -142,6 +154,7 @@ class Cards extends React.Component {
 
     this.nextCard = this.nextCard.bind(this);
     this.previousCard = this.previousCard.bind(this);
+    this.backgroundColors = props.backgroundColors.slice();
 
     this.ref = this.props.refProp;
   }
@@ -150,12 +163,11 @@ class Cards extends React.Component {
     return (
       <div className={"Cards"} ref = {this.ref}>
         <button className="LeftArrow" onClick={this.previousCard}></button>
-        <div className="Card">
+        <div className="Card" style = {{backgroundColor: this.props.backgroundColors[this.state.pos]}}>
           <img className = "CardImage" src = {this.props.cardImagePaths[this.state.pos]}/>
           <h1 className="CardsTitle">{this.props.titles[this.state.pos]}</h1>
           <p className="CardsDescription">{this.props.descriptions[this.state.pos]}</p>
           <a href = {this.props.links[this.state.pos]} target = "_blank">{this.props.linkMessages[this.state.pos]}</a>
-    
         </div>
         <button className="RightArrow" onClick={this.nextCard}></button>
       </div>
