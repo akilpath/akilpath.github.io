@@ -72,8 +72,14 @@ class Homepage extends React.Component {
             using the BST while giving the user the ability to step through the sorting process, or to watch the sort happen at a customized speed.`
           ]}
           links={[
+            "https://github.com/HDSB-GWS-Brooks-202122-ICS4-01/Chess-Plus-Plus",
+            "https://github.com/akilpath/GhostSurvival",
+            "https://github.com/akilpath/Binary-Search-Tree-Visualization"
           ]}
           linkMessages={[
+            "Check out on GitHub!",
+            "Check out on GitHub!",
+            "Check out on GitHub!"
           ]}
           backgroundColors = {[
             "#ff6766",
@@ -146,12 +152,10 @@ class BriefAboutMe extends React.Component {
 class Cards extends React.Component {
   constructor(props) {
     super(props);
-    this.titles = props.titles.slice();
     this.positionEnd = props.descriptions.length - 1;
     this.state = {
       pos: 0,
     }
-
     this.nextCard = this.nextCard.bind(this);
     this.previousCard = this.previousCard.bind(this);
     this.backgroundColors = props.backgroundColors.slice();
@@ -166,8 +170,8 @@ class Cards extends React.Component {
         <div className="Card" style = {{backgroundColor: this.props.backgroundColors[this.state.pos]}}>
           <img className = "CardImage" src = {this.props.cardImagePaths[this.state.pos]}/>
           <h1 className="CardsTitle">{this.props.titles[this.state.pos]}</h1>
-          <p className="CardsDescription">{this.props.descriptions[this.state.pos]}</p>
-          <a href = {this.props.links[this.state.pos]} target = "_blank">{this.props.linkMessages[this.state.pos]}</a>
+          <a href = {this.props.links[this.state.pos]} target = "_blank"><b>{this.props.linkMessages[this.state.pos]}</b></a>
+          <p className="CardsDescription">{this.props.descriptions[this.state.pos]} </p>
         </div>
         <button className="RightArrow" onClick={this.nextCard}></button>
       </div>
