@@ -53,12 +53,6 @@
   margin-top: 40vh;
   margin-bottom: 50vh;
 }
-
-.NavigationBar {
-  height: 7vh;
-  width: 100%;
-}
-
 .MyName {
   font-weight: lighter;
   padding-top: 1vh;
@@ -200,6 +194,7 @@
   background-color: transparent;
   transition: all 0.5;
   transition-timing-function: ease-in-out;
+  transition-property: all;
 }
 
 .RightArrow:hover, .LeftArrow:hover{
@@ -219,4 +214,30 @@ a{
   margin: auto;
 }
 
+
+.Links{
+  margin: auto;
+  margin-top: 3vh;
+  margin-bottom: 15vh;
+}
+
+.LinksContainer{
+  margin-top: 2vh;
+}
+
+.LinkImage{
+  margin: auto;
+  width: 10vw;
+  height: 10vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  transition-property: width, height;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.LinkImage:hover{
+  width: 15vw;
+  height: 15vw;
+}
 

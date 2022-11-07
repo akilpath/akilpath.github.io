@@ -4,6 +4,8 @@ import gradPhoto from "./images/graduationphoto.JPEG";
 import chessLogo from "./images/chesspluspluslogo.jpg";
 import binarySortVisLogo from "./images/binarysortvislogo.jpg";
 import ghostSurvivalLogo from "./images/ghostsurvival.jpg";
+import linkedinLogo from "./images/linkedInLogo.png";
+import githubLogo from "./images/githubLogo.png";
 
 class Homepage extends React.Component {
   constructor(props){
@@ -12,6 +14,7 @@ class Homepage extends React.Component {
     this.briefAboutMeRef = React.createRef();
     this.cardsHeaderRef = React.createRef();
     this.cardsRef = React.createRef();
+    this.linksRef = React.createRef()
     this.state = {visible: false};
   }
 
@@ -36,6 +39,7 @@ class Homepage extends React.Component {
     observer.observe(this.briefAboutMeRef.current);
     observer.observe(this.cardsHeaderRef.current);
     observer.observe(this.cardsRef.current);
+    observer.observe(this.linksRef.current)
   }
 
   render(){
@@ -77,9 +81,9 @@ class Homepage extends React.Component {
             "https://github.com/akilpath/Binary-Search-Tree-Visualization"
           ]}
           linkMessages={[
-            "Check out on GitHub!",
-            "Check out on GitHub!",
-            "Check out on GitHub!"
+            "See on GitHub",
+            "See on GitHub",
+            "See on GitHub"
           ]}
           backgroundColors = {[
             "#ff6766",
@@ -87,32 +91,10 @@ class Homepage extends React.Component {
             "#16dffd",
           ]}
         />
+        <Links refProp = {this.linksRef}/>
       </div>
     );
   }
-}
-
-class NavigationBar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div className="NavigationBar">
-        <button className="button" onClick={this.goToHome}>HOME </button>
-        <button className="button" onClick={this.goToBio}>ABOUT ME</button>
-        <button className="button" onClick={this.goToBio}>PROJECTS</button>
-        <button className="button" onClick={this.goToBio}>CONTACT ME</button>
-
-      </div>
-    );
-  }
-
-  goToHome() {}
-
-  goToBio() {}
-
 }
 
 class BriefAboutMe extends React.Component {
@@ -193,6 +175,29 @@ class Cards extends React.Component {
       pos: this.state.pos - 1
     });
   }
+}
+
+class Links extends React.Component {
+
+  constructor(props){
+    super(props)
+    this.ref = this.props.refProp
+
+  }
+
+
+  render(){
+    return (
+      <div className = "Links" ref = {this.ref}>
+        <h1 className = "CardsHeader">Check out my LinkedIn and GitHub!</h1>
+        <div className= "LinksContainer">
+          <a href = "https://www.linkedin.com/in/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = "LinkImage" src = {linkedinLogo}/></a>
+          <a href = "https://github.com/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = "LinkImage" src = {githubLogo}/></a>
+        </div>
+      </div>
+    )
+  }
+
 }
 
 export default Homepage;
