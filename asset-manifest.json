@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.b3441093.css",
-    "main.js": "/static/js/main.228fcc96.js",
+    "main.css": "/static/css/main.fdecb04d.css",
+    "main.js": "/static/js/main.49aca477.js",
     "static/js/787.bbe01249.chunk.js": "/static/js/787.bbe01249.chunk.js",
     "static/media/graduationphoto.JPEG": "/static/media/graduationphoto.aad16015cdc06fe372b7.JPEG",
     "static/media/ghostsurvival.jpg": "/static/media/ghostsurvival.a01087341778a17fdf60.jpg",
     "static/media/binarysortvislogo.jpg": "/static/media/binarysortvislogo.92d7dfd7f15839117816.jpg",
     "static/media/chesspluspluslogo.jpg": "/static/media/chesspluspluslogo.cfcae3dbe70c0e66fc3b.jpg",
     "index.html": "/index.html",
-    "main.b3441093.css.map": "/static/css/main.b3441093.css.map",
-    "main.228fcc96.js.map": "/static/js/main.228fcc96.js.map",
+    "main.fdecb04d.css.map": "/static/css/main.fdecb04d.css.map",
+    "main.49aca477.js.map": "/static/js/main.49aca477.js.map",
     "787.bbe01249.chunk.js.map": "/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3441093.css",
-    "static/js/main.228fcc96.js"
+    "static/css/main.fdecb04d.css",
+    "static/js/main.49aca477.js"
   ]
 }
