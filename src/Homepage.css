@@ -42,16 +42,13 @@
 
 .Homepage-header {
   margin: auto;
+  margin-top: 7%;
   height: 100%;
   width: 100%;
   display: block;
-  flex-direction: column;
   position: relative;
-  align-items: center;
-  justify-content: center;
-  font-size: 10vmin;
-  margin-top: 40vh;
-  margin-bottom: 50vh;
+  align-items: left;
+  font-size: 8vmin;
 }
 .MyName {
   font-weight: lighter;
@@ -99,11 +96,11 @@
 .GraduationPhoto {
   position: relative;
   margin-left: 10vw;
-  margin-right: 2.5vw;
+  margin-right: 4vw;
   width: 22vw;
   height: auto;
   background-color: black;
-  border: black 2vmin solid;
+  border: black 1vmin solid;
 }
 
 .Intro {
@@ -217,8 +214,8 @@ a{
 
 .Links{
   margin: auto;
-  margin-top: 3vh;
-  margin-bottom: 15vh;
+  margin-top: 25%;
+  margin-bottom: 25%;
 }
 
 .LinksContainer{

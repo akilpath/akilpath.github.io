@@ -10,7 +10,6 @@ import githubLogo from "./images/githubLogo.png";
 class Homepage extends React.Component {
   constructor(props){
     super(props);
-    this.headerRef = React.createRef();
     this.briefAboutMeRef = React.createRef();
     this.cardsHeaderRef = React.createRef();
     this.cardsRef = React.createRef();
@@ -32,10 +31,9 @@ class Homepage extends React.Component {
     }, {
       root: null,
       rootMargin: "0px",
-      threshold: 1.0
+      threshold: 1
     })
 
-    observer.observe(this.headerRef.current);
     observer.observe(this.briefAboutMeRef.current);
     observer.observe(this.cardsHeaderRef.current);
     observer.observe(this.cardsRef.current);
@@ -45,10 +43,7 @@ class Homepage extends React.Component {
   render(){
     return (
       <div className="Homepage">
-        <header className={"Homepage-header"} ref = {this.headerRef}>
-          <h1>Hey!<h1 className = {"MyName"}>I'm Akil</h1></h1>
           {/*<NavigationBar />*/}
-        </header>
         <BriefAboutMe refProp = {this.briefAboutMeRef}/>
         <h1 className = {"CardsHeader"} ref = {this.cardsHeaderRef}>Here are some of my projects</h1>
         <Cards
@@ -105,26 +100,30 @@ class BriefAboutMe extends React.Component {
 
   render() {
     return (
-      <div className={"BriefAboutMe"} ref = {this.ref}>
-        
-        <img className="GraduationPhoto" src={gradPhoto} alt="Me from graduation" />
-        <div className="Intro">
-          <p>
-            I'm a first year Mechatronics Engineering student at the University of Waterloo. 
-            <br/>
-            <br/>
-            I have a passion for robotics and
-            engineering and I love to take on new projects and challenges.
-            <br/>
-            <br/>
-            I'm experienced in Java, Python and C++. I also built this website using React.js!
-            I was a senior programmer for Team 5409 in the 2022 season, and am returning as a programming mentor for this upcoming 2023 season.
-            <br/>
-            <br/>
-            <b>
-            Continue down below to see some of my projects!
-            </b>
-          </p>
+      <div ref = {this.ref}>
+        <h1 className= "Homepage-header">
+          My name is Akil...
+        </h1>
+        <div className={"BriefAboutMe"}>
+          <img className="GraduationPhoto" src={gradPhoto} alt="Me from graduation" />
+          <div className="Intro">
+            <p>
+              I'm a first year Mechatronics Engineering student at the University of Waterloo. 
+              <br/>
+              <br/>
+              I have a passion for robotics and
+              engineering and I love to take on new projects and challenges.
+              <br/>
+              <br/>
+              I'm experienced in Java, Python and C++. I also built this website using React.js!
+              I was a senior programmer for Team 5409 in the 2022 season, and am returning as a programming mentor for this upcoming 2023 season.
+              <br/>
+              <br/>
+              <b>
+              Continue down below to see some of my projects!
+              </b>
+            </p>
+          </div>
         </div>
       </div>
     );
@@ -189,11 +188,8 @@ class Links extends React.Component {
   render(){
     return (
       <div className = "Links" ref = {this.ref}>
-        <h1 className = "CardsHeader">Check out my LinkedIn and GitHub!</h1>
-        <div className= "LinksContainer">
-          <a href = "https://www.linkedin.com/in/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = "LinkImage" src = {linkedinLogo}/></a>
-          <a href = "https://github.com/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = "LinkImage" src = {githubLogo}/></a>
-        </div>
+        <a href = "https://www.linkedin.com/in/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = "LinkImage" src = {linkedinLogo}/></a>
+        <a href = "https://github.com/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = "LinkImage" src = {githubLogo}/></a>
       </div>
     )
   }
