@@ -31,7 +31,7 @@ class Homepage extends React.Component {
     }, {
       root: null,
       rootMargin: "0px",
-      threshold: 1
+      threshold: 0
     })
 
     observer.observe(this.briefAboutMeRef.current);
