@@ -1,0 +1,31 @@
+.BriefAboutMe {
+    margin: auto;
+    margin-bottom: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url("../images/yellowbackdrop.jpg");
+    width: 80vw;
+    height: fit-content;
+  }
+
+.GraduationPhoto {
+    position: relative;
+    margin-left: 10vw;
+    margin-right: 4vw;
+    width: 22vw;
+    height: auto;
+    background-color: black;
+}
+  
+.Intro {
+    color: white;
+    position: relative;
+    margin: 0px auto;
+    text-align: left;
+    margin: 2vh 10vw 2vh 2.5vw;
+    width: 40vw;
+    height: auto;
+    font-size: 3.5vmin;
+}

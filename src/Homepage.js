@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
-import './Homepage.css';
+import HomePageCSS from "./css/Homepage.module.css";
+import BriefAboutMeCSS from "./css/BriefAboutMe.module.css";
+import ProjectCSS from "./css/Project.module.css";
+import LinksCSS from "./css/Links.module.css";
 import gradPhoto from "./images/graduationphoto.JPEG";
 import chessLogo from "./images/chesspluspluslogo.jpg";
 import binarySortVisLogo from "./images/binarysortvislogo.jpg";
@@ -21,17 +24,17 @@ class Homepage extends React.Component {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in");
-          entry.target.classList.remove("fade-out");
+          entry.target.classList.add(HomePageCSS.fadeIn);
+          entry.target.classList.remove(HomePageCSS.fadeOut);
         } else{
-          entry.target.classList.add("fade-out");
-          entry.target.classList.remove("fade-in");
+          entry.target.classList.add(HomePageCSS.fadeOut);
+          entry.target.classList.remove(HomePageCSS.fadeIn);
         }
       })
     }, {
       root: null,
       rootMargin: "0px",
-      threshold: 0
+      threshold: 0.5
     })
 
     observer.observe(this.briefAboutMeRef.current);
@@ -42,10 +45,10 @@ class Homepage extends React.Component {
 
   render(){
     return (
-      <div className="Homepage">
+      <div className={HomePageCSS.Homepage}>
           {/*<NavigationBar />*/}
         <BriefAboutMe refProp = {this.briefAboutMeRef}/>
-        <h1 className = {"CardsHeader"} ref = {this.cardsHeaderRef}>Here are some of my projects</h1>
+        <h1 className = {ProjectCSS.CardsHeader} ref = {this.cardsHeaderRef}>Here are some of my projects</h1>
         <Cards
           refProp = {this.cardsRef}
           cardImagePaths = {[
@@ -101,26 +104,25 @@ class BriefAboutMe extends React.Component {
   render() {
     return (
       <div ref = {this.ref}>
-        <h1 className= "Homepage-header">
+        <h1 className= {HomePageCSS.HomepageHeader}>
           My name is Akil...
         </h1>
-        <div className={"BriefAboutMe"}>
-          <img className="GraduationPhoto" src={gradPhoto} alt="Me from graduation" />
-          <div className="Intro">
+        <div className={BriefAboutMeCSS.BriefAboutMe}>
+          <img className= {BriefAboutMeCSS.GraduationPhoto} src={gradPhoto} alt="Me from graduation" />
+          <div className={BriefAboutMeCSS.Intro}>
             <p>
               I'm a first year Mechatronics Engineering student at the University of Waterloo. 
               <br/>
               <br/>
-              I have a passion for robotics and
-              engineering and I love to take on new projects and challenges.
+              I've been coding for over four years and I have a passion for robotics with an interest in machine learning. 
               <br/>
               <br/>
-              I'm experienced in Java, Python and C++. I also built this website using React.js!
-              I was a senior programmer for Team 5409 in the 2022 season, and am returning as a programming mentor for this upcoming 2023 season.
+              I've worked in Java, JavaScript, Python, C++, C and I also built this website using React.js. In my free time I like to take
+              on new projects, learn new frameworks and push my limits. 
               <br/>
               <br/>
               <b>
-              Continue down below to see some of my projects!
+              Scroll down to take a look at some of my past projects.
               </b>
             </p>
           </div>
@@ -146,15 +148,15 @@ class Cards extends React.Component {
 
   render() {
     return (
-      <div className={"Cards"} ref = {this.ref}>
-        <button className="LeftArrow" onClick={this.previousCard}></button>
-        <div className="Card" style = {{backgroundColor: this.props.backgroundColors[this.state.pos]}}>
-          <img className = "CardImage" src = {this.props.cardImagePaths[this.state.pos]}/>
-          <h1 className="CardsTitle">{this.props.titles[this.state.pos]}</h1>
+      <div className={ProjectCSS.Cards} ref = {this.ref}>
+        <button className={ProjectCSS.LeftArrow} onClick={this.previousCard}></button>
+        <div className={ProjectCSS.Card} style = {{backgroundColor: this.props.backgroundColors[this.state.pos]}}>
+          <img className = {ProjectCSS.CardImage} src = {this.props.cardImagePaths[this.state.pos]}/>
+          <h1 className={ProjectCSS.CardsTitle}>{this.props.titles[this.state.pos]}</h1>
           <a href = {this.props.links[this.state.pos]} target = "_blank"><b>{this.props.linkMessages[this.state.pos]}</b></a>
-          <p className="CardsDescription">{this.props.descriptions[this.state.pos]} </p>
+          <p className={ProjectCSS.CardsDescription}>{this.props.descriptions[this.state.pos]} </p>
         </div>
-        <button className="RightArrow" onClick={this.nextCard}></button>
+        <button className={ProjectCSS.RightArrow} onClick={this.nextCard}></button>
       </div>
     );
   }
@@ -177,19 +179,17 @@ class Cards extends React.Component {
 }
 
 class Links extends React.Component {
-
   constructor(props){
     super(props)
     this.ref = this.props.refProp
 
   }
 
-
   render(){
     return (
-      <div className = "Links" ref = {this.ref}>
-        <a href = "https://www.linkedin.com/in/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = "LinkImage" src = {linkedinLogo}/></a>
-        <a href = "https://github.com/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = "LinkImage" src = {githubLogo}/></a>
+      <div className = {LinksCSS.Links} ref = {this.ref}>
+        <a href = "https://www.linkedin.com/in/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {linkedinLogo}/></a>
+        <a href = "https://github.com/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {githubLogo}/></a>
       </div>
     )
   }

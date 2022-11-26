@@ -1,0 +1,27 @@
+
+.Links{
+margin: auto;
+margin-top: 25%;
+margin-bottom: 25%;
+}
+
+.LinksContainer{
+margin-top: 2vh;
+}
+
+.LinkImage{
+margin: auto;
+width: 10vw;
+height: 10vw;
+margin-left: 3vw;
+margin-right: 3vw;
+transition-property: width, height;
+transition-duration: 0.5s;
+transition-timing-function: ease-in-out;
+}
+
+.LinkImage:hover{
+width: 15vw;
+height: 15vw;
+}
+  

@@ -1,0 +1,116 @@
+*{margin: auto; padding: 0}
+
+.fadeIn{
+  animation: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+@keyframes fadein {
+  from{
+    opacity: 0;
+    transform: translate(-10vw, 0);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+.fadeOut{
+  animation: fadeout;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+  transform: translate(10vw, 0);
+}
+
+@keyframes fadeout {
+  from{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to{
+    opacity: 0;
+    transform: translate(10vw, 0);
+  }
+}
+
+.Homepage {
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica, sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.HomepageHeader {
+  margin: auto;
+  margin-top: 7%;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  align-items: left;
+  font-size: 8vmin;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 0.5vmin;
+  background-color: transparent;
+  height: 100%;
+  width: auto;
+  text-align: center;
+  font-size: 2vmin;
+  color: black;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.button:hover {
+  height: 120%;
+  background-color: black;
+  color: white;
+  border: 5px;
+}
+
+a{
+  margin: auto;
+}
+
+
+.Links{
+  margin: auto;
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+
+.LinksContainer{
+  margin-top: 2vh;
+}
+
+.LinkImage{
+  margin: auto;
+  width: 10vw;
+  height: 10vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  transition-property: width, height;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.LinkImage:hover{
+  width: 15vw;
+  height: 15vw;
+}
+
