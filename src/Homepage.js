@@ -37,7 +37,7 @@ class Homepage extends React.Component {
       threshold: 0.5
     })
 
-    observer.observe(this.briefAboutMeRef.current);
+    // observer.observe(this.briefAboutMeRef.current);
     observer.observe(this.cardsHeaderRef.current);
     observer.observe(this.cardsRef.current);
     observer.observe(this.linksRef.current)
@@ -47,7 +47,7 @@ class Homepage extends React.Component {
     return (
       <div className={HomePageCSS.Homepage}>
           {/*<NavigationBar />*/}
-        <BriefAboutMe refProp = {this.briefAboutMeRef}/>
+        <BriefAboutMe/>
         <h1 className = {ProjectCSS.CardsHeader} ref = {this.cardsHeaderRef}>Here are some of my projects</h1>
         <Cards
           refProp = {this.cardsRef}
@@ -98,18 +98,55 @@ class Homepage extends React.Component {
 class BriefAboutMe extends React.Component {
   constructor(props) {
     super(props)
-    this.ref = this.props.refProp
+    this.ref = React.createRef();
+    this.paraRef = React.createRef();
+    this.headerRef = React.createRef();
+
+    this.fadeIn = this.fadeIn.bind(this);
+    this.fadeOut = this.fadeOut.bind(this);
+  }
+
+  fadeIn = () => {
+    this.paraRef.current.classList.add(BriefAboutMeCSS.inView);
+    this.paraRef.current.classList.remove(BriefAboutMeCSS.outView);
+    this.headerRef.current.classList.add(BriefAboutMeCSS.inView);
+    this.headerRef.current.classList.remove(BriefAboutMeCSS.outView);
+  }
+
+  fadeOut = () => {
+    this.paraRef.current.classList.add(BriefAboutMeCSS.outView);
+    this.paraRef.current.classList.remove(BriefAboutMeCSS.inView);
+    this.headerRef.current.classList.add(BriefAboutMeCSS.outView);
+    this.headerRef.current.classList.remove(BriefAboutMeCSS.inView);
+  }
+
+  componentDidMount(){
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.fadeIn();
+        } else{
+          this.fadeOut();
+        }
+      })
+    }, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5
+    })
+
+    observer.observe(this.ref.current);
   }
 
   render() {
     return (
-      <div ref = {this.ref}>
-        <h1 className= {HomePageCSS.HomepageHeader}>
+      <div ref = {this.ref} className={BriefAboutMeCSS.BriefAboutMe}>
+        <h1 ref = {this.headerRef} className= {BriefAboutMeCSS.HomepageHeader}>
           My name is Akil...
         </h1>
-        <div className={BriefAboutMeCSS.BriefAboutMe}>
-          <img className= {BriefAboutMeCSS.GraduationPhoto} src={gradPhoto} alt="Me from graduation" />
-          <div className={BriefAboutMeCSS.Intro}>
+        <div style = {{display: "flex", alignItems: "center", justifyContent: "center", position: "relative"}}>
+          {/* /<img className= {BriefAboutMeCSS.GraduationPhoto} src={gradPhoto} alt="Me from graduation" /> */}
+          <div ref = {this.paraRef} className={BriefAboutMeCSS.Intro}>
             <p>
               I'm a first year Mechatronics Engineering student at the University of Waterloo. 
               <br/>

@@ -48,17 +48,6 @@
   color: black;
 }
 
-.HomepageHeader {
-  margin: auto;
-  margin-top: 7%;
-  height: 100%;
-  width: 100%;
-  display: block;
-  position: relative;
-  align-items: left;
-  font-size: 8vmin;
-}
-
 .button {
   cursor: pointer;
   outline: none;
