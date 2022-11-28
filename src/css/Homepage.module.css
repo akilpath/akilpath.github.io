@@ -1,51 +1,15 @@
 *{margin: auto; padding: 0}
 
-.fadeIn{
-  animation: fadein;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  opacity: 1;
-  transform: translate(0,0);
-}
-
-@keyframes fadein {
-  from{
-    opacity: 0;
-    transform: translate(-10vw, 0);
-  }
-  to{
-    opacity: 1;
-    transform: translate(0,0);
-  }
-}
-
-.fadeOut{
-  animation: fadeout;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  opacity: 0;
-  transform: translate(10vw, 0);
-}
-
-@keyframes fadeout {
-  from{
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-  to{
-    opacity: 0;
-    transform: translate(10vw, 0);
-  }
-}
-
 .Homepage {
   display: block;
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: rgb(255, 255, 255);
   color: black;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .button {

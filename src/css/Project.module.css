@@ -1,91 +1,108 @@
-.Cards {
-    display: flex;
-    width: 60vw;
-    height: 30vh;
-    margin-top: 5vh;
-    margin-bottom: 50vh;
+*{margin: auto; padding: 0}
+.Banner{
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  width: 90vw;
+  height: 45vh;
+  margin: 0vh 5vw 0vh 5vw;
+  overflow: hidden;
+
+}
+
+.image{
+  height: 30vmin;
+  width: 30vmin;
+  margin:auto;
+  border: 0.75vmin outset rgb(232, 230, 230);
+}
+
+.descriptionContainer{
+  margin: auto;
+  position: relative;
+  height: 30vmin;
+  width: 50vmax;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0.4vmax 0.6vmin rgb(117, 117, 117);
+  border: 0.5vmin outset rgb(232, 230, 230);
+}
+
+.description{
+  position: relative;
+  height: 20vh;
+  margin: 3vmin 1vmax 0 1vmax;
+  color: black;
+  font-size: 2.5vmin;
+  background-color: transparent;
+}
+
+.projectlink{
+  font-size: 2vmin;
+}
+
+
+.imageIn{
+  animation: iIn;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  transform: translate(0,0);
+}
+
+@keyframes iIn {
+  from{
+    transform: translate(-50vw, 0);
   }
-  
-  .CardsHeader{
-    display: block;
-    margin-bottom: 10vh;
-    font-size: 8vmin;
+  to{
+    transform: translate(0, 0);
   }
-  
-  .Card{
-    display: inline-block;
-    margin: auto;
-    width: 20vw;
-    height: 20vw;
-    font-size: 2vmin;
-    border-radius: 5vmin;
-    border: black 1vmin solid;
-    overflow: hidden;
-    transition-property: width, height;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
+}
+
+.imageOut{
+  animation: iOut;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  transform: translate(-50vw, 0);
+}
+
+@keyframes iOut {
+  from{
+    transform: translate(0, 0);
   }
-  
-  
-  .Card:hover {
-    width: 31vw;
-    height: 35vw;
+  to{
+    transform: translate(-50vw, 0);
   }
-  
-  .CardsDescription{
-    width: 100%;
-    max-width: 30vw;
-    height: 100%;
-    color: white;
-    background-color: transparent;
-    margin-top: 0.5vw;
-    margin-left: 0.5vw;
+}
+
+.descIn{
+  animation: dIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  transform: translate(0,0);
+}
+
+@keyframes dIn {
+  from{
+    transform: translate(100vw, 0);
   }
-  
-  .CardsLinks{
-    width: 100%;
-    height: 100%;
+  to{
+    transform: translate(0, 0);
   }
-  .CardsTitle {
-    color: white;
-    margin: auto;
-    font-size: 4vmin;
+}
+
+.descOut{
+  animation: dOut;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  transform: translate(100vw, 0);
+}
+
+@keyframes dOut {
+  from{
+    transform: translate(0, 0);
   }
-  .CardImage {
-    margin: auto;
-    margin-bottom: none;
-    margin-top: none;
-    opacity: 1;
-    padding: none;
-    width: 20vw;
-    height: 20vw;
+  to{
+    transform: translate(100vw, 0);
   }
-  
-  .RightArrow, .LeftArrow{
-    height: 4vmin;
-    width: 4vmin;
-    margin: auto;
-    font-size: 3vmin;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 2vmin;
-    border: none;
-    background-color: transparent;
-    transition: all 0.5;
-    transition-timing-function: ease-in-out;
-    transition-property: all;
-  }
-  
-  .RightArrow:hover, .LeftArrow:hover{
-    background-color: rgb(0, 0, 0);
-    color: white;
-  }
-  
-  .RightArrow::after{
-    content: ">";
-  }
-  
-  .LeftArrow::after{
-    content: "<";
-  }
+}
+
   

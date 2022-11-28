@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import HomePageCSS from "./css/Homepage.module.css";
 import BriefAboutMeCSS from "./css/BriefAboutMe.module.css";
 import ProjectCSS from "./css/Project.module.css";
 import LinksCSS from "./css/Links.module.css";
-import gradPhoto from "./images/graduationphoto.JPEG";
+import legoSwerve from "./images/legoSwerve.jpg"
 import chessLogo from "./images/chesspluspluslogo.jpg";
 import binarySortVisLogo from "./images/binarysortvislogo.jpg";
 import ghostSurvivalLogo from "./images/ghostsurvival.jpg";
@@ -14,80 +14,51 @@ class Homepage extends React.Component {
   constructor(props){
     super(props);
     this.briefAboutMeRef = React.createRef();
-    this.cardsHeaderRef = React.createRef();
-    this.cardsRef = React.createRef();
     this.linksRef = React.createRef()
     this.state = {visible: false};
-  }
-
-  componentDidMount(){
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(HomePageCSS.fadeIn);
-          entry.target.classList.remove(HomePageCSS.fadeOut);
-        } else{
-          entry.target.classList.add(HomePageCSS.fadeOut);
-          entry.target.classList.remove(HomePageCSS.fadeIn);
-        }
-      })
-    }, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5
-    })
-
-    // observer.observe(this.briefAboutMeRef.current);
-    observer.observe(this.cardsHeaderRef.current);
-    observer.observe(this.cardsRef.current);
-    observer.observe(this.linksRef.current)
   }
 
   render(){
     return (
       <div className={HomePageCSS.Homepage}>
-          {/*<NavigationBar />*/}
         <BriefAboutMe/>
-        <h1 className = {ProjectCSS.CardsHeader} ref = {this.cardsHeaderRef}>Here are some of my projects</h1>
-        <Cards
-          refProp = {this.cardsRef}
-          cardImagePaths = {[
-            chessLogo, 
-            ghostSurvivalLogo, 
-            binarySortVisLogo
-          ]}
-          titles={[
-            "Chess++",
-            "Ghost Survival",
-            "Binary Sort Visualization"
-          ]}
-          descriptions={[
-            `Chess++ is a user friendly, fast and practical chess application me and my friend, Selim, 
-            built using JavaFX during our Grade 12 computer science course. It supports full chess gameplay against 
-            someone through pass and play, against a computer, or online. It also has accounts to keep track of game stats and the ability to save games
-            locally to continue them later.`,
-            `Ghost Survival is a Zombies style game I made in 11th grade computer science course. It is written in Python and uses Panda3D to
-            to render the 3D environment and the ghosts. As the game progresses, the amount of ghosts increase and their health increases. The game also 
-            has the option to use a microbit in the controls scheme.`,
-            `This program is a simple program to help visualize a binary search tree, how nodes are inserted into the tree and how an in order traversal is
+        <Project
+            imagePath = {legoSwerve}
+            title = "Project Magnemite"
+            description = {`
+              Project Magnemite is my most recent project, where I worked in a group of four to develop a differential swerve drive using a
+              LEGO Mindstorms EV3 and 3D printed parts. We pushed through the limits of the EV3
+              and ended up making an amazing robot that caught the attention of everyone who saw it. 
+            `}
+            link = "https://github.com/Francis-Bui/LegoSwerve"
+            linkMessage = "See on GitHub"
+        />
+        <Project 
+            imagePath = {chessLogo} 
+            title = "Chess++" 
+            description = { `Chess Plus Plus is a user friendly chess application my friend and I 
+              built using JavaFX during our senior year computer science course. It supports full chess gameplay against 
+              someone through pass and play, against a computer, or online. It also has accounts to keep track of game stats and the ability to save games
+              locally to continue them later.`}
+            link = "https://github.com/HDSB-GWS-Brooks-202122-ICS4-01/Chess-Plus-Plus"
+            linkMessage = "See on GitHub"
+        />
+        <Project
+            imagePath = {ghostSurvivalLogo} 
+            title = "Ghost Survival" 
+            description = { `Ghost Survival is a Zombies style game I made in my for my final project in 11th grade. It is written in Python and uses Panda3D to
+            to render the 3D environment and the ghosts. As the game progresses, it gets much more difficult as more ghosts spawn in and their health increases.`}
+            link = "https://github.com/akilpath/GhostSurvival"
+            linkMessage = "See on GitHub"
+        />
+        <Project 
+            imagePath = {binarySortVisLogo} 
+            title = "Binary Sort Visualization" 
+            description = { `This program is a simple program to help visualize a binary search tree, how nodes are inserted into the tree and how an in order traversal is
             performed. It is built in Java using JavaFX. It allows the user to modify the amount of nodes in the tree, generate random arrays to sort
-            using the BST while giving the user the ability to step through the sorting process, or to watch the sort happen at a customized speed.`
-          ]}
-          links={[
-            "https://github.com/HDSB-GWS-Brooks-202122-ICS4-01/Chess-Plus-Plus",
-            "https://github.com/akilpath/GhostSurvival",
-            "https://github.com/akilpath/Binary-Search-Tree-Visualization"
-          ]}
-          linkMessages={[
-            "See on GitHub",
-            "See on GitHub",
-            "See on GitHub"
-          ]}
-          backgroundColors = {[
-            "#ff6766",
-            "#900b0c",
-            "#16dffd",
-          ]}
+            using the BST while giving the user the ability to step through the sorting process, or to watch the sort happen at a customized speed.`}
+            link = "https://github.com/akilpath/Binary-Search-Tree-Visualization"
+            linkMessage = "See on GitHub"
         />
         <Links refProp = {this.linksRef}/>
       </div>
@@ -109,15 +80,11 @@ class BriefAboutMe extends React.Component {
   fadeIn = () => {
     this.paraRef.current.classList.add(BriefAboutMeCSS.inView);
     this.paraRef.current.classList.remove(BriefAboutMeCSS.outView);
-    this.headerRef.current.classList.add(BriefAboutMeCSS.inView);
-    this.headerRef.current.classList.remove(BriefAboutMeCSS.outView);
   }
 
   fadeOut = () => {
     this.paraRef.current.classList.add(BriefAboutMeCSS.outView);
     this.paraRef.current.classList.remove(BriefAboutMeCSS.inView);
-    this.headerRef.current.classList.add(BriefAboutMeCSS.outView);
-    this.headerRef.current.classList.remove(BriefAboutMeCSS.inView);
   }
 
   componentDidMount(){
@@ -132,7 +99,7 @@ class BriefAboutMe extends React.Component {
     }, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5
+      threshold: 0.9
     })
 
     observer.observe(this.ref.current);
@@ -141,12 +108,11 @@ class BriefAboutMe extends React.Component {
   render() {
     return (
       <div ref = {this.ref} className={BriefAboutMeCSS.BriefAboutMe}>
-        <h1 ref = {this.headerRef} className= {BriefAboutMeCSS.HomepageHeader}>
-          My name is Akil...
-        </h1>
         <div style = {{display: "flex", alignItems: "center", justifyContent: "center", position: "relative"}}>
-          {/* /<img className= {BriefAboutMeCSS.GraduationPhoto} src={gradPhoto} alt="Me from graduation" /> */}
           <div ref = {this.paraRef} className={BriefAboutMeCSS.Intro}>
+            <h1 className= {BriefAboutMeCSS.HomepageHeader}>
+              My name is Akil...
+            </h1>
             <p>
               I'm a first year Mechatronics Engineering student at the University of Waterloo. 
               <br/>
@@ -169,56 +135,77 @@ class BriefAboutMe extends React.Component {
   }
 }
 
-class Cards extends React.Component {
+class Project extends React.Component {
   constructor(props) {
-    super(props);
-    this.positionEnd = props.descriptions.length - 1;
-    this.state = {
-      pos: 0,
-    }
-    this.nextCard = this.nextCard.bind(this);
-    this.previousCard = this.previousCard.bind(this);
-    this.backgroundColors = props.backgroundColors.slice();
+    super(props)
+    this.tite = props.title
+    this.color = props.col
+    this.imagePath = props.imagePath
+    this.linkMessage = props.linkMessage
+    this.description = props.description
+    this.link = props.link
 
-    this.ref = this.props.refProp;
+    this.bannerRef = React.createRef();
+    this.imageRef = React.createRef();
+    this.descContainerRef = React.createRef();
+    this.inView = this.inView.bind(this);
+    this.outView = this.outView.bind(this);
+  }
+
+  inView = () => {
+    this.imageRef.current.classList.add(ProjectCSS.imageIn);
+    this.imageRef.current.classList.remove(ProjectCSS.imageOut);
+    this.descContainerRef.current.classList.add(ProjectCSS.descIn);
+    this.descContainerRef.current.classList.remove(ProjectCSS.descOut);
+  }
+
+  outView = () => {
+    this.imageRef.current.classList.remove(ProjectCSS.imageIn);
+    this.imageRef.current.classList.add(ProjectCSS.imageOut);
+    this.descContainerRef.current.classList.remove(ProjectCSS.descIn);
+    this.descContainerRef.current.classList.add(ProjectCSS.descOut);
+  }
+
+  componentDidMount() {
+    const projObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting){
+          this.inView()
+        } else {
+          this.outView()
+        }
+      })
+    }, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0
+    })
+
+    projObserver.observe(this.bannerRef.current)
   }
 
   render() {
     return (
-      <div className={ProjectCSS.Cards} ref = {this.ref}>
-        <button className={ProjectCSS.LeftArrow} onClick={this.previousCard}></button>
-        <div className={ProjectCSS.Card} style = {{backgroundColor: this.props.backgroundColors[this.state.pos]}}>
-          <img className = {ProjectCSS.CardImage} src = {this.props.cardImagePaths[this.state.pos]}/>
-          <h1 className={ProjectCSS.CardsTitle}>{this.props.titles[this.state.pos]}</h1>
-          <a href = {this.props.links[this.state.pos]} target = "_blank"><b>{this.props.linkMessages[this.state.pos]}</b></a>
-          <p className={ProjectCSS.CardsDescription}>{this.props.descriptions[this.state.pos]} </p>
+      <div className= {ProjectCSS.Banner} ref  = {this.bannerRef}>
+        <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef}/>
+        <div className = {ProjectCSS.descriptionContainer} ref = {this.descContainerRef}>
+          <p className = {ProjectCSS.description}>
+            {this.description}
+          </p>
+          <a className = {ProjectCSS.projectlink} href = {this.link}>{this.linkMessage}</a>
         </div>
-        <button className={ProjectCSS.RightArrow} onClick={this.nextCard}></button>
-      </div>
+    </div>
     );
-  }
-
-  nextCard() {
-    if (this.state.pos + 1 > this.positionEnd) return;
-
-    this.setState({
-      pos: this.state.pos + 1
-    });
-  }
-
-  previousCard() {
-    if (this.state.pos - 1 < 0) return; 
-
-    this.setState({
-      pos: this.state.pos - 1
-    });
   }
 }
 
 class Links extends React.Component {
   constructor(props){
     super(props)
-    this.ref = this.props.refProp
+    this.ref = React.createRef()
+  }
+
+  componentDidMount(){
 
   }
 
@@ -230,7 +217,6 @@ class Links extends React.Component {
       </div>
     )
   }
-
 }
 
 export default Homepage;

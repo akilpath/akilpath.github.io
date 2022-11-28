@@ -35,20 +35,19 @@
 
 .BriefAboutMe {
     margin: auto;
-    margin-bottom: 35vh;
-    background-color: black;
-    background-image: url("../images/irelandPhoto.png");
+    background-color: white;
+    background-image: url("../images/irelandphoto.JPG");
     background-size: auto 100%;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
 
 .HomepageHeader {
     margin: auto;
-    padding-top: 5%;
-    color: white;
+    color: rgb(0, 0, 0);
     display: block;
     position: relative;
     align-items: left;
@@ -65,13 +64,15 @@
 }
   
 .Intro {
-    color: white;
+    color: black;
     position: relative;
-    backdrop-filter: blur(10px);
-    right: 20%;
-    margin: 0px auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0.4vmax 0.6vmin rgb(117, 117, 117);
+    border: 0.5vmin outset rgb(232, 230, 230);
+    top: 10vh;
+    right: 25vw;
     text-align: left;
-    margin: 10vh 10vw 2vh 2.5vw;
+    padding: 2%;
     width: 40vw;
     height: auto;
     font-size: 3.5vmin;
