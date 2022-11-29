@@ -50,7 +50,7 @@ class Homepage extends React.Component {
         />
         <Project 
             imagePath = {chessLogo} 
-            title = "Chess++" 
+            title = "Chess Plus Plus" 
             description = { `Chess Plus Plus is a user friendly chess application my friend and I 
               built using JavaFX during our senior year computer science course. It supports full chess gameplay against 
               someone through pass and play, against a computer, or online. It also has accounts to keep track of game stats and the ability to save games
