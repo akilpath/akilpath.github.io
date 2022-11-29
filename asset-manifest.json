@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1dc01e81.css",
-    "main.js": "/static/js/main.55631f82.js",
+    "main.css": "/static/css/main.bf07dc6c.css",
+    "main.js": "/static/js/main.f1b9f499.js",
     "static/js/787.bbe01249.chunk.js": "/static/js/787.bbe01249.chunk.js",
     "static/media/irelandphoto.JPG": "/static/media/irelandphoto.c99542b30589422f6c6b.JPG",
+    "static/media/dunkirk.JPG": "/static/media/dunkirk.82da6121b3f7fd704b14.JPG",
     "static/media/legoSwerve.jpg": "/static/media/legoSwerve.aacfbe95d4deb43d7bab.jpg",
     "static/media/ghostsurvival.jpg": "/static/media/ghostsurvival.a01087341778a17fdf60.jpg",
     "static/media/binarysortvislogo.jpg": "/static/media/binarysortvislogo.92d7dfd7f15839117816.jpg",
     "static/media/chesspluspluslogo.jpg": "/static/media/chesspluspluslogo.cfcae3dbe70c0e66fc3b.jpg",
     "index.html": "/index.html",
-    "main.1dc01e81.css.map": "/static/css/main.1dc01e81.css.map",
-    "main.55631f82.js.map": "/static/js/main.55631f82.js.map",
+    "main.bf07dc6c.css.map": "/static/css/main.bf07dc6c.css.map",
+    "main.f1b9f499.js.map": "/static/js/main.f1b9f499.js.map",
     "787.bbe01249.chunk.js.map": "/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1dc01e81.css",
-    "static/js/main.55631f82.js"
+    "static/css/main.bf07dc6c.css",
+    "static/js/main.f1b9f499.js"
   ]
 }
