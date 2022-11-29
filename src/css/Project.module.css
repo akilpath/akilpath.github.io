@@ -10,15 +10,18 @@
 
 }
 
+.projectHeader{
+  margin-top: 2vmin;
+  font-size: 2.5vmin;
+}
+
 .image{
   height: 30vmin;
   width: 30vmin;
-  margin:auto;
   border: 0.75vmin outset rgb(232, 230, 230);
 }
 
 .descriptionContainer{
-  margin: auto;
   position: relative;
   height: 30vmin;
   width: 50vmax;
@@ -29,8 +32,8 @@
 
 .description{
   position: relative;
-  height: 20vh;
-  margin: 3vmin 1vmax 0 1vmax;
+  height: auto;
+  margin: 0.5vmin 1vmax 0px 0.5vmax;
   color: black;
   font-size: 2.5vmin;
   background-color: transparent;

@@ -3,6 +3,8 @@ import HomePageCSS from "./css/Homepage.module.css";
 import BriefAboutMeCSS from "./css/BriefAboutMe.module.css";
 import ProjectCSS from "./css/Project.module.css";
 import LinksCSS from "./css/Links.module.css";
+
+import dunkirk from "./images/dunkirk.JPG";
 import legoSwerve from "./images/legoSwerve.jpg"
 import chessLogo from "./images/chesspluspluslogo.jpg";
 import binarySortVisLogo from "./images/binarysortvislogo.jpg";
@@ -32,6 +34,19 @@ class Homepage extends React.Component {
             `}
             link = "https://github.com/Francis-Bui/LegoSwerve"
             linkMessage = "See on GitHub"
+        />
+        <Project 
+            imagePath = {dunkirk}
+            title = "Dunkirk"
+            description = {`
+              Dunkirk is Team 5409's 2022 robot. This robot is our most succesful robot yet, securing not only the first district win for the team ever,
+              but also two more wins and placing us third in the province, qualifying us for worlds. I played a heavy role in testing the robot, developing
+              the robot subsystems and tuning the control systems of the robot. The hard work of our team allowed us to make our name in the FRC scene and also
+              win two Innovation in Controls awards. 
+            `}
+            link = ""
+            linkMessage = ""
+        
         />
         <Project 
             imagePath = {chessLogo} 
@@ -111,17 +126,17 @@ class BriefAboutMe extends React.Component {
         <div style = {{display: "flex", alignItems: "center", justifyContent: "center", position: "relative"}}>
           <div ref = {this.paraRef} className={BriefAboutMeCSS.Intro}>
             <h1 className= {BriefAboutMeCSS.HomepageHeader}>
-              My name is Akil...
+              My name is Akil.
             </h1>
             <p>
               I'm a first year Mechatronics Engineering student at the University of Waterloo. 
               <br/>
               <br/>
-              I've been coding for over four years and I have a passion for robotics with an interest in machine learning. 
+              As I've been coding for four years, I've developed a passion for programming. 
               <br/>
               <br/>
               I've worked in Java, JavaScript, Python, C++, C and I also built this website using React.js. In my free time I like to take
-              on new projects, learn new frameworks and push my limits. 
+              on new projects and learn new frameworks.
               <br/>
               <br/>
               <b>
@@ -138,7 +153,7 @@ class BriefAboutMe extends React.Component {
 class Project extends React.Component {
   constructor(props) {
     super(props)
-    this.tite = props.title
+    this.title = props.title
     this.color = props.col
     this.imagePath = props.imagePath
     this.linkMessage = props.linkMessage
@@ -178,10 +193,10 @@ class Project extends React.Component {
     }, {
       root: null,
       rootMargin: "0px",
-      threshold: 0
+      threshold: 0.1
     })
-
     projObserver.observe(this.bannerRef.current)
+    this.outView();
   }
 
   render() {
@@ -189,6 +204,7 @@ class Project extends React.Component {
       <div className= {ProjectCSS.Banner} ref  = {this.bannerRef}>
         <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef}/>
         <div className = {ProjectCSS.descriptionContainer} ref = {this.descContainerRef}>
+          <h2 className = {ProjectCSS.projectHeader}>{this.title}</h2>
           <p className = {ProjectCSS.description}>
             {this.description}
           </p>
