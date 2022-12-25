@@ -3,18 +3,21 @@
 margin: auto;
 margin-bottom: 3vmin;
 margin-top: 3vmin;
+padding: 1%;
+width: fit-content;
+height: fit-content;
 }
 
-.LinksContainer{
-margin-top: 2vh;
-}
 
 .LinkImage{
 margin: auto;
+background-color: white;
+border-radius: 5px;
 width: 7vmin;
 height: 7vmin;
-margin-left: 3vw;
-margin-right: 3vw;
+margin-left: 0.5vw;
+margin-right: 0.5vw;
+border: rgb(255, 255, 255) solid 2px;
 transition-property: width, height;
 transition-duration: 0.5s;
 transition-timing-function: ease-in-out;

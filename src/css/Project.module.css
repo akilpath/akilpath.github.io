@@ -1,46 +1,76 @@
 *{margin: auto; padding: 0}
 .Banner{
-  display: inline-flex;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
   position: relative;
-  width: 90vw;
-  height: 45vh;
-  margin: 0vh 5vw 0vh 5vw;
+  width: 100vw;
+  height: fit-content;
   overflow: hidden;
-
+  border: rgb(255, 255, 255) solid 2px;
 }
 
 .projectHeader{
-  margin-top: 2vmin;
-  font-size: 2.5vmin;
+  color: white;
+  font-size: 9.5vmin;
+  margin-bottom: 4vh;
+}
+.projButton{
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  font-family: 'Unbounded', cursive;
+  background-color: transparent;
+  color: white;
+  padding: 2%;
+  border: rgb(255, 255, 255) solid 2px;
+  font-size: 2vmin;
+}
+
+.projButton:hover{
+  background-color: white;
+  color: black;
+  padding: 2%;
 }
 
 .image{
-  height: 30vmin;
-  width: 30vmin;
-  border: 0.75vmin outset rgb(232, 230, 230);
+  height: 50vw;
+  width: 50vw;
 }
 
 .descriptionContainer{
   position: relative;
-  height: 30vmin;
-  width: 50vmax;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0.4vmax 0.6vmin rgb(117, 117, 117);
-  border: 0.5vmin outset rgb(232, 230, 230);
+  width: 50vw;
 }
 
 .description{
   position: relative;
+  width: 40vw;
   height: auto;
-  margin: 0.5vmin 1vmax 0px 0.5vmax;
-  color: black;
+  margin: auto;
+  margin-bottom: 5vh;
+  color: rgb(255, 255, 255);
   font-size: 2.5vmin;
   background-color: transparent;
 }
 
 .projectlink{
-  font-size: 2vmin;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  font-family: 'Unbounded', cursive;
+  background-color: transparent;
+  color: white;
+  padding: 2%;
+  border: rgb(255, 255, 255) solid 2px;
+  font-size: 2vmin
+}
+
+.projectlink:hover{
+  background-color: white;
+  color: black;
+  padding: 2%;
 }
 
 
@@ -78,33 +108,33 @@
 
 .descIn{
   animation: dIn;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
-  transform: translate(0,0);
+  opacity: 1;
 }
 
 @keyframes dIn {
   from{
-    transform: translate(100vw, 0);
+    opacity: 0;
   }
   to{
-    transform: translate(0, 0);
+    opacity: 1;
   }
 }
 
 .descOut{
   animation: dOut;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
-  transform: translate(100vw, 0);
+  opacity: 0;
 }
 
 @keyframes dOut {
   from{
-    transform: translate(0, 0);
+    opacity: 1;
   }
   to{
-    transform: translate(100vw, 0);
+    opacity: 0;
   }
 }
 

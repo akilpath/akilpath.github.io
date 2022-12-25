@@ -4,15 +4,15 @@
   animation: in;
   animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
-  transform: translate(0,0);
+  opacity: 1;
 }
 
 @keyframes in {
   from{
-    transform: translate(-50vw, 0);
+    opacity: 0;
   }
   to{
-    transform: translate(0, 0);
+    opacity: 1;
   }
 }
 
@@ -20,34 +20,31 @@
   animation: out;
   animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
-  transform: translate(-50vw, 0);
+  opacity: 0;
 }
 
 @keyframes out {
   from{
-    transform: translate(0, 0);
+    opacity: 1;
   }
   to{
-    transform: translate(-50vw, 0);
+    opacity: 0;
   }
 }
 
 
 .BriefAboutMe {
+    display: flex;
     margin: auto;
-    background-color: white;
-    background-image: url("../images/irelandphoto.JPG");
-    background-size: auto 100%;
-    background-position: right;
-    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    border: rgb(255, 255, 255) solid 2px;
   }
 
 .HomepageHeader {
     margin: auto;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: block;
     position: relative;
     align-items: left;
@@ -55,25 +52,20 @@
     backdrop-filter: blur(2px);
   }
 
-.GraduationPhoto {
+.MyPhoto {
     position: relative;
-    margin-left: 10vw;
-    margin-right: 4vw;
-    width: 22vw;
-    height: auto;
+    height: 100vh;
+    width: 60vw;
+    object-fit: cover;
 }
   
 .Intro {
-    color: black;
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0.4vmax 0.6vmin rgb(117, 117, 117);
-    border: 0.5vmin outset rgb(232, 230, 230);
-    top: 10vh;
-    right: 25vw;
-    text-align: left;
-    padding: 2%;
-    width: 40vw;
-    height: auto;
-    font-size: 3.5vmin;
+  position: relative;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: left;
+  padding: 3%;
+  height: 100vh;
+  font-size: 3.5vmin;
+  margin: auto;
 }
