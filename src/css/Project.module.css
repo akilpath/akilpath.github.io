@@ -7,31 +7,33 @@
   width: 100vw;
   height: fit-content;
   overflow: hidden;
-  border: rgb(255, 255, 255) solid 1px;
+  font-family: din-condensed, sans-serif;
 }
 
 .projectHeader{
   color: white;
-  font-size: 4vw;
+  font-size: 9vw;
   margin-bottom: 4vh;
+  line-height: 90%;
+  margin-right: 1vw;
+  margin-left: 1vw;
 }
 .projButton{
   cursor: pointer;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
-  font-family: 'Unbounded', cursive;
+  font-family: 'Montserrat', sans-serif;
   background-color: transparent;
   color: white;
   padding: 2%;
-  border: rgb(255, 255, 255) solid 2px;
+  border: rgb(255, 255, 255) solid 0.1px;
   font-size: 2vmin;
 }
 
 .projButton:hover{
-  background-color: white;
-  color: black;
-  padding: 2%;
+  padding: 2.5%;
+  border: rgb(255, 255, 255) solid 1.5px;
 }
 
 .image{
@@ -42,6 +44,7 @@
 .descriptionContainer{
   position: relative;
   width: 50vw;
+  margin-right: 1vw;
 }
 
 .description{
@@ -53,24 +56,7 @@
   color: rgb(255, 255, 255);
   font-size: 2.5vmin;
   background-color: transparent;
-}
-
-.projectlink{
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  font-family: 'Unbounded', cursive;
-  background-color: transparent;
-  color: white;
-  padding: 2%;
-  border: rgb(255, 255, 255) solid 2px;
-  font-size: 2vmin
-}
-
-.projectlink:hover{
-  background-color: white;
-  color: black;
-  padding: 2%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 

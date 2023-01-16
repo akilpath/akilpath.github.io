@@ -5,36 +5,14 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-family: 'Unbounded', cursive;
-  background-color: rgb(0, 0, 0);
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(35,31,32);
   color: black;
   width: 100%;
   overflow: hidden;
 }
 
-.button {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  border-radius: 0.5vmin;
-  background-color: transparent;
-  height: 100%;
-  width: auto;
-  text-align: center;
-  font-size: 2vmin;
-  color: black;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  transition: all 0.5s;
-  transition-timing-function: ease-in-out;
-}
 
-.button:hover {
-  height: 120%;
-  background-color: black;
-  color: white;
-  border: 5px;
-}
 
 a{
   margin: auto;

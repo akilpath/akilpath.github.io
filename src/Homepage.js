@@ -131,7 +131,7 @@ class BriefAboutMe extends React.Component {
       <div ref = {this.ref} className={BriefAboutMeCSS.BriefAboutMe}>
         <div ref = {this.paraRef} className={BriefAboutMeCSS.Intro}>
             <p>
-              My name is Akil, I'm a Mechatronics Engineering student at the University of Waterloo with a passion for
+              My name is Akil, <br/><br/> I'm a Mechatronics Engineering student at the University of Waterloo with a passion for
               software development and robotics.
               <br/>
               <br/>
@@ -230,6 +230,15 @@ class Project extends React.Component {
   }
 
   getElements(){
+    let getLink = (linkUrl) => {
+      if(linkUrl === ""){
+        return null
+      } else{
+        return (<a className = {ProjectCSS.projButton} href = {this.link}>{this.linkMessage}</a>)
+      }
+
+    }
+
     if(!this.state.displayDesc){
       return (
         <button className= {ProjectCSS.projButton} onClick = {() => this.setState({displayDesc: true})}>View more</button>
@@ -242,7 +251,7 @@ class Project extends React.Component {
           </p>
           <div style = {{display: 'flex'}}>
             <button className= {ProjectCSS.projButton} onClick = {() => this.setState({displayDesc: false})}>Hide</button>
-            <a className = {ProjectCSS.projectlink} href = {this.link}>{this.linkMessage}</a> 
+            {getLink(this.linkMessage)}
           </div>
         </div>
       )

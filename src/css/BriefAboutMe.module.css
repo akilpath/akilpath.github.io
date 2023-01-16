@@ -39,7 +39,6 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    border: rgb(255, 255, 255) solid 2px;
   }
 
 .HomepageHeader {
@@ -62,10 +61,8 @@
 .Intro {
   position: relative;
   color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.2);
   text-align: left;
   padding: 3%;
-  height: 100vh;
   font-size: 3.5vmin;
   margin: auto;
 }
