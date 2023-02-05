@@ -63,6 +63,22 @@
   color: rgb(255, 255, 255);
   text-align: left;
   padding: 3%;
-  font-size: 3.5vmin;
+  font-size: 2vw;
   margin: auto;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .MyPhoto{
+    position: absolute;
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  .Intro{
+    position: absolute;
+    z-index: 2;
+    top: 60vh;
+    font-size: 2vh;
+  }
 }

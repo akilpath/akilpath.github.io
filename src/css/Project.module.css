@@ -39,12 +39,39 @@
 .image{
   height: 50vw;
   width: 50vw;
+  
+}
+@media (max-aspect-ratio: 1/1) {
+  .Banner{
+    width: 100vw;
+    height: 100vw;
+  }
+  .image{
+    filter: blur(0px);
+    margin: auto;
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+  }
+
+  .descriptionContainer{
+    min-width: 75vw;
+    max-width: 75vw;
+    height: fit-content;
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    backdrop-filter: brightness(0.75);
+    padding: 2vh 1vh 2vh 1vh;
+  }
+  .projectHeader{
+    font-size: 12vw;
+  }
 }
 
 .descriptionContainer{
   position: relative;
   width: 50vw;
-  margin-right: 1vw;
 }
 
 .description{
