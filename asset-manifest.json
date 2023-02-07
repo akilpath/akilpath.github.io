@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.81a5f113.css",
-    "main.js": "/static/js/main.0d170503.js",
+    "main.css": "/static/css/main.4015a9fe.css",
+    "main.js": "/static/js/main.2a37f989.js",
     "static/js/787.bbe01249.chunk.js": "/static/js/787.bbe01249.chunk.js",
     "static/media/irelandphoto.JPG": "/static/media/irelandphoto.c99542b30589422f6c6b.JPG",
     "static/media/dunkirk.JPG": "/static/media/dunkirk.82da6121b3f7fd704b14.JPG",
@@ -10,12 +10,12 @@
     "static/media/binarysortvislogo.jpg": "/static/media/binarysortvislogo.92d7dfd7f15839117816.jpg",
     "static/media/chesspluspluslogo.jpg": "/static/media/chesspluspluslogo.cfcae3dbe70c0e66fc3b.jpg",
     "index.html": "/index.html",
-    "main.81a5f113.css.map": "/static/css/main.81a5f113.css.map",
-    "main.0d170503.js.map": "/static/js/main.0d170503.js.map",
+    "main.4015a9fe.css.map": "/static/css/main.4015a9fe.css.map",
+    "main.2a37f989.js.map": "/static/js/main.2a37f989.js.map",
     "787.bbe01249.chunk.js.map": "/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81a5f113.css",
-    "static/js/main.0d170503.js"
+    "static/css/main.4015a9fe.css",
+    "static/js/main.2a37f989.js"
   ]
 }
