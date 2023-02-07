@@ -65,7 +65,7 @@ class Homepage extends React.Component {
         <Project
             imagePath = {ghostSurvivalLogo} 
             title = "GHOST SURVIVAL" 
-            description = { `Ghost Survival is a Zombies style game I made in my for my final project in 11th grade. It is written in Python and uses Panda3D to
+            description = { `Ghost Survival is a Zombies style game I made for my final project in 11th grade. It is written in Python and uses Panda3D to
             to render the 3D environment and the ghosts. As the game progresses, it gets much more difficult as more ghosts spawn in and their health increases.`}
             link = "https://github.com/akilpath/GhostSurvival"
             linkMessage = "See on GitHub"

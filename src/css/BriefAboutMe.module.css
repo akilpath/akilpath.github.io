@@ -68,17 +68,21 @@
 }
 
 @media (max-aspect-ratio: 1/1) {
+  .BriefAboutMe{
+    width: 100vw;
+    overflow: hidden;
+  }
   .MyPhoto{
     position: absolute;
-    width: 100vw;
-    height: 60vh;
+    width: 100%;
+    height: 50vh;
     object-fit: cover;
   }
 
   .Intro{
     position: absolute;
     z-index: 2;
-    top: 60vh;
+    top: 50vh;
     font-size: 2vh;
   }
 }
