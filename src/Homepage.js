@@ -8,7 +8,7 @@ import dunkirk from "./images/dunkirk.JPG";
 import legoSwerve from "./images/legoSwerve.jpg"
 import chessLogo from "./images/chesspluspluslogo.jpg";
 import binarySortVisLogo from "./images/binarysortvislogo.jpg";
-import ghostSurvivalLogo from "./images/ghostsurvival.jpg";
+import securityCamImg from "./images/securitycam.jpg";
 import linkedinLogo from "./images/linkedInLogo.png";
 import githubLogo from "./images/githubLogo.png";
 import myPhoto from "./images/irelandphoto.JPG";
@@ -26,29 +26,37 @@ class Homepage extends React.Component {
       <div className={HomePageCSS.Homepage}>
         <BriefAboutMe/>
         <Project
+            imagePath = {securityCamImg} 
+            title = "SMART CCTV" 
+            description = { `This Smart Security Camera uses an AI to detect whether someone is at my door or not, notifying me by text if there is. It uses a binary image classifier trained
+            using TensorFlow 2.0 and deployed on a RaspberryPi 3B+ through TensorFlow Lite. `}
+            link = "https://github.com/akilpath/PiSecurityCamera"
+            linkMessage = "See on GitHub"
+            left = {true}
+        />
+        <Project
             imagePath = {legoSwerve}
             title = "PROJECT MAGNEMITE"
             description = {`
-              Project Magnemite is my most recent project, where I worked in a group of four to develop a differential swerve drive using a
-              LEGO Mindstorms EV3 and 3D printed parts. We pushed through the limits of the EV3
-              and ended up making an amazing robot that caught the attention of everyone who saw it. 
+              Project Magnemite is a differential swerve drive robot created usings a Lego Mindstorms EV3 and 3D printed components. This was built by me and three other
+              FRC alumni as our final project for our first year Mechatronics course.
             `}
             link = "https://github.com/Francis-Bui/LegoSwerve"
             linkMessage = "See on GitHub"
-            left = {true}
+            left = {false}
         />
         <Project 
             imagePath = {dunkirk}
             title = "DUNKIRK"
             description = {`
-              Dunkirk is Team 5409's 2022 robot. This robot is our most succesful robot yet, securing not only the first district win for the team ever,
-              but also two more wins and placing us third in the province, qualifying us for worlds. I played a heavy role in testing the robot, developing
+              Dunkirk is Team 5409's 2022 robot. This robot is our most succesful robot yet, secured three district wins for our team, placed us 3rd in the
+              province and qualified us for the World Championships. I played a heavy role in testing the robot, developing
               the robot subsystems and tuning the control systems of the robot. The hard work of our team allowed us to make our name in the FRC scene and also
               win two Innovation in Controls awards. 
             `}
             link = ""
             linkMessage = ""
-            left = {false}
+            left = {true}
         
         />
         <Project 
@@ -59,15 +67,6 @@ class Homepage extends React.Component {
               someone through pass and play, against a computer, or online. It also has accounts to keep track of game stats and the ability to save games
               locally to continue them later.`}
             link = "https://github.com/HDSB-GWS-Brooks-202122-ICS4-01/Chess-Plus-Plus"
-            linkMessage = "See on GitHub"
-            left = {true}
-        />
-        <Project
-            imagePath = {ghostSurvivalLogo} 
-            title = "GHOST SURVIVAL" 
-            description = { `Ghost Survival is a Zombies style game I made for my final project in 11th grade. It is written in Python and uses Panda3D to
-            to render the 3D environment and the ghosts. As the game progresses, it gets much more difficult as more ghosts spawn in and their health increases.`}
-            link = "https://github.com/akilpath/GhostSurvival"
             linkMessage = "See on GitHub"
             left = {false}
         />
@@ -234,7 +233,7 @@ class Project extends React.Component {
       if(linkUrl === ""){
         return null
       } else{
-        return (<a className = {ProjectCSS.projButton} href = {this.link}>{this.linkMessage}</a>)
+        return (<a className = {ProjectCSS.projButton} href = {this.link} target = "_blank" rel = "noopener">{this.linkMessage} </a>)
       }
 
     }
