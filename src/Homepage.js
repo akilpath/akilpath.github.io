@@ -11,7 +11,7 @@ import binarySortVisLogo from "./images/binarysortvislogo.jpg";
 import securityCamImg from "./images/securitycam.jpg";
 import linkedinLogo from "./images/linkedInLogo.png";
 import githubLogo from "./images/githubLogo.png";
-import myPhoto from "./images/irelandphoto.JPG";
+import myPhoto from "./images/akilphoto.jpg";
 
 class Homepage extends React.Component {
   constructor(props){
@@ -130,11 +130,14 @@ class BriefAboutMe extends React.Component {
       <div ref = {this.ref} className={BriefAboutMeCSS.BriefAboutMe}>
         <div ref = {this.paraRef} className={BriefAboutMeCSS.Intro}>
             <p>
-              My name is Akil, <br/><br/> I'm a Mechatronics Engineering student at the University of Waterloo with a passion for
-              software development and robotics.
+              <b>My name is Akil,</b>
+              <br/>
+              <br/> 
+              I'm a Mechatronics Engineering student at the University of Waterloo with a passion for
+              software development, robotics and A.I.
               <br/>
               <br/>
-              I've worked in Java, JavaScript, Python, C++, C and I also built this website using React.js. In my free time I like to take
+              I've worked in Python, C++, Java and I also built this website using React.js. In my free time I like to take
               on new projects and learn new frameworks.
               <br/>
               <br/>
@@ -206,7 +209,9 @@ class Project extends React.Component {
     if(this.left){
       return (
         <div className= {ProjectCSS.Banner} ref  = {this.bannerRef}>
-          <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef} alt = "project" />
+          <div className = {ProjectCSS.imageContainer}>
+            <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef} alt = "project" />
+          </div>
           <div className = {ProjectCSS.descriptionContainer} ref = {this.descContainerRef}>
             <h2 className = {ProjectCSS.projectHeader}>{this.title}</h2>
             {this.getElements()}
@@ -220,7 +225,9 @@ class Project extends React.Component {
             <h2 className = {ProjectCSS.projectHeader}>{this.title}</h2>
             {this.getElements()}
           </div>
-          <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef} alt = "project" />
+          <div className= {ProjectCSS.imageContainer}>
+            <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef} alt = "project" />
+          </div>
       </div>
       );
     }
