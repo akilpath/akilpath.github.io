@@ -11,7 +11,22 @@ import binarySortVisLogo from "./images/binarysortvislogo.jpg";
 import securityCamImg from "./images/securitycam.jpg";
 import linkedinLogo from "./images/linkedInLogo.png";
 import githubLogo from "./images/githubLogo.png";
-import myPhoto from "./images/akilphoto.jpg";
+
+import myphoto from "./images/akilphoto.jpg"
+
+import cpplogo from "./images/languageIcons/cpplogo.png";
+import pythonlogo from "./images/languageIcons/pythonlogo.png";
+import jslogo from "./images/languageIcons/javascriptlogo.png";
+import htmllogo from "./images/languageIcons/htmllogo.png";
+import csslogo from "./images/languageIcons/csslogo.png";
+import javalogo from "./images/languageIcons/javalogo.png";
+import tensorflowLogo from "./images/languageIcons/tensorflowlogo.png";
+import waterlooLogo from "./images/languageIcons/uwaterloo.logo.png"
+import solidworksLogo from "./images/languageIcons/solidworkslogo.png"
+import reactlogo from "./images/languageIcons/reactlogo.png"
+import firstLogo from "./images/languageIcons/FIRSTlogo.png"
+import gitlogo from "./images/languageIcons/gitlogo.png"
+
 
 class Homepage extends React.Component {
   constructor(props){
@@ -95,6 +110,8 @@ class BriefAboutMe extends React.Component {
 
     this.fadeIn = this.fadeIn.bind(this);
     this.fadeOut = this.fadeOut.bind(this);
+
+    this.iconList = [0,1,2,3,4,5]
   }
 
   fadeIn = () => {
@@ -125,28 +142,61 @@ class BriefAboutMe extends React.Component {
     observer.observe(this.ref.current);
   }
 
+  getIcons(n = 0){
+    
+  }
+
   render() {
     return (
       <div ref = {this.ref} className={BriefAboutMeCSS.BriefAboutMe}>
-        <div ref = {this.paraRef} className={BriefAboutMeCSS.Intro}>
-            <p>
-              <b>My name is Akil,</b>
-              <br/>
-              <br/> 
-              I'm a Mechatronics Engineering student at the University of Waterloo with a passion for
-              software development, robotics and A.I.
-              <br/>
-              <br/>
-              I've worked in Python, C++, Java and I also built this website using React.js. In my free time I like to take
-              on new projects and learn new frameworks.
-              <br/>
-              <br/>
-              <b>
-              Scroll down to take a look at some of my past projects.
-              </b>
-            </p>
+        <div style = {{margin: "auto"}}className= {BriefAboutMeCSS.LogoContainer}>
+          <img className = {BriefAboutMeCSS.Icon} src = {waterlooLogo} alt = "UW logo" style = {{gridRow: "1", gridColumnStart: "1", gridColumnEnd: "3"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {cpplogo} alt = "Linkedin logo" style = {{gridRow: "1", gridColumn: "3"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = "Linkedin logo" style = {{gridRow: "1", gridColumn: "4"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {gitlogo} alt = "Linkedin logo" style = {{gridColumnStart: "5", gridColumnEnd: "7"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {csslogo} alt = "Linkedin logo" style = {{gridRow: "1", gridColumn: "7"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "Linkedin logo" style = {{gridRow: "1", gridColumn: "8"}}/>
+          
+          <img className = {BriefAboutMeCSS.Icon} src = {firstLogo} alt = "Linkedin logo" style = {{gridColumnStart: "1", gridColumnEnd: "3"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {jslogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {htmllogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {waterlooLogo} alt = "UW logo" style = {{gridColumnStart: "6", gridColumnEnd: "8"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {tensorflowLogo} alt = "Linkedin logo"/>
+
+          <img className = {BriefAboutMeCSS.Icon} src = {cpplogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {reactlogo} alt = "Linkedin logo" style = {{gridColumnStart: "3", gridColumnEnd: "5"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {csslogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {reactlogo} alt = "Linkedin logo" style = {{gridColumnStart: "7", gridColumnEnd: "9"}}/>
+
+          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {jslogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {htmllogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {firstLogo} alt = "Linkedin logo" style = {{gridColumnStart: "4", gridColumnEnd: "6"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {tensorflowLogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {cpplogo} alt = "Linkedin logo"/>
+
+          <img className = {BriefAboutMeCSS.Icon} src = {solidworksLogo} alt = "Linkedin logo" style = {{gridColumnStart: "1", gridColumnEnd: "3"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {csslogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {tensorflowLogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {gitlogo} alt = "Linkedin logo" style = {{gridColumnStart: "7", gridColumnEnd: "9"}}/>
         </div>
-        <img className = {BriefAboutMeCSS.MyPhoto} src = {myPhoto} alt = "Akil Pathiranage" />
+        <div className= {BriefAboutMeCSS.Name}>
+          <div>
+            <h1>My name is <b>Akil Pathiranage</b></h1>
+            <p>
+              I'm a Mechatronics Engineering student @ UW with a passion for SWE and ML. 
+            </p>
+            <p>
+              <b>Scroll to see some of my projects!</b>
+            </p>
+          </div>
+        </div>
       </div>
     );
   }
