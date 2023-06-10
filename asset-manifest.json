@@ -1,21 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.4015a9fe.css",
-    "main.js": "/static/js/main.449daaf6.js",
+    "main.css": "/static/css/main.fbfbeb53.css",
+    "main.js": "/static/js/main.41dd4d14.js",
     "static/js/787.bbe01249.chunk.js": "/static/js/787.bbe01249.chunk.js",
-    "static/media/irelandphoto.JPG": "/static/media/irelandphoto.c99542b30589422f6c6b.JPG",
+    "static/media/akilphoto.jpg": "/static/media/akilphoto.dd461d16d9ea9cd29f7f.jpg",
     "static/media/dunkirk.JPG": "/static/media/dunkirk.82da6121b3f7fd704b14.JPG",
     "static/media/securitycam.jpg": "/static/media/securitycam.fd1dba0e885428a166c3.jpg",
     "static/media/legoSwerve.jpg": "/static/media/legoSwerve.aacfbe95d4deb43d7bab.jpg",
+    "static/media/reactlogo.png": "/static/media/reactlogo.5f1073661be871ad9cee.png",
     "static/media/binarysortvislogo.jpg": "/static/media/binarysortvislogo.92d7dfd7f15839117816.jpg",
+    "static/media/FIRSTlogo.png": "/static/media/FIRSTlogo.42b56347357efe711f28.png",
+    "static/media/uwaterloo.logo.png": "/static/media/uwaterloo.logo.d827452957ca6a159799.png",
+    "static/media/tensorflowlogo.png": "/static/media/tensorflowlogo.c0e81a20419cb04cd164.png",
     "static/media/chesspluspluslogo.jpg": "/static/media/chesspluspluslogo.cfcae3dbe70c0e66fc3b.jpg",
+    "static/media/pythonlogo.png": "/static/media/pythonlogo.de584b2121d264f2b354.png",
+    "static/media/javascriptlogo.png": "/static/media/javascriptlogo.a91ca5d7d8f8fc9146f3.png",
     "index.html": "/index.html",
-    "main.4015a9fe.css.map": "/static/css/main.4015a9fe.css.map",
-    "main.449daaf6.js.map": "/static/js/main.449daaf6.js.map",
+    "main.fbfbeb53.css.map": "/static/css/main.fbfbeb53.css.map",
+    "main.41dd4d14.js.map": "/static/js/main.41dd4d14.js.map",
     "787.bbe01249.chunk.js.map": "/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4015a9fe.css",
-    "static/js/main.449daaf6.js"
+    "static/css/main.fbfbeb53.css",
+    "static/js/main.41dd4d14.js"
   ]
 }
