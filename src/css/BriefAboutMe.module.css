@@ -43,9 +43,9 @@
 }
 
 .Photo{
-  width: 10vw;
+  width: 20vw;
   height: auto;
-  border-radius: 50px;
+  z-index: 1;
 }
 
 .Icon{
@@ -57,16 +57,12 @@
   transition-timing-function: ease-in-out;
 }
 
-.Icon:hover{
-  width: 66%;
-  height: auto;
-}
 
 .Name{
   display: inline-flex;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
-  bottom: 40%;
+  bottom: 30%;
   width: 70%;
   left: 15%;
   justify-self: center;
@@ -93,5 +89,15 @@
     width: 100vw;
     overflow: hidden;
     object-fit: cover;
+  }
+
+  .Photo{
+    width: 60%;
+    height: auto;
+  }
+
+  .Name{
+    width: 90%;
+    left: 5%
   }
 }

@@ -12,7 +12,7 @@ import securityCamImg from "./images/securitycam.jpg";
 import linkedinLogo from "./images/linkedInLogo.png";
 import githubLogo from "./images/githubLogo.png";
 
-import myphoto from "./images/akilphoto.jpg"
+import myphoto from "./images/myphoto.png"
 
 import cpplogo from "./images/languageIcons/cpplogo.png";
 import pythonlogo from "./images/languageIcons/pythonlogo.png";
@@ -150,45 +150,46 @@ class BriefAboutMe extends React.Component {
     return (
       <div ref = {this.ref} className={BriefAboutMeCSS.BriefAboutMe}>
         <div style = {{margin: "auto"}}className= {BriefAboutMeCSS.LogoContainer}>
-          <img className = {BriefAboutMeCSS.Icon} src = {waterlooLogo} alt = "UW logo" style = {{gridRow: "1", gridColumnStart: "1", gridColumnEnd: "3"}}/>
-          <img className = {BriefAboutMeCSS.Icon} src = {cpplogo} alt = "Linkedin logo" style = {{gridRow: "1", gridColumn: "3"}}/>
-          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = "Linkedin logo" style = {{gridRow: "1", gridColumn: "4"}}/>
-          <img className = {BriefAboutMeCSS.Icon} src = {gitlogo} alt = "Linkedin logo" style = {{gridColumnStart: "5", gridColumnEnd: "7"}}/>
-          <img className = {BriefAboutMeCSS.Icon} src = {csslogo} alt = "Linkedin logo" style = {{gridRow: "1", gridColumn: "7"}}/>
-          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "Linkedin logo" style = {{gridRow: "1", gridColumn: "8"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {waterlooLogo} alt = "" style = {{gridRow: "1", gridColumnStart: "1", gridColumnEnd: "3"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {cpplogo} alt = "" style = {{gridRow: "1", gridColumn: "3"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = "" style = {{gridRow: "1", gridColumn: "4"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {gitlogo} alt = "" style = {{gridColumnStart: "5", gridColumnEnd: "7"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {csslogo} alt = "" style = {{gridRow: "1", gridColumn: "7"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "" style = {{gridRow: "1", gridColumn: "8"}}/>
           
-          <img className = {BriefAboutMeCSS.Icon} src = {firstLogo} alt = "Linkedin logo" style = {{gridColumnStart: "1", gridColumnEnd: "3"}}/>
-          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {jslogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {htmllogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {firstLogo} alt = "" style = {{gridColumnStart: "1", gridColumnEnd: "3"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {jslogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {htmllogo} alt = ""/>
           <img className = {BriefAboutMeCSS.Icon} src = {waterlooLogo} alt = "UW logo" style = {{gridColumnStart: "6", gridColumnEnd: "8"}}/>
-          <img className = {BriefAboutMeCSS.Icon} src = {tensorflowLogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {tensorflowLogo} alt = ""/>
 
-          <img className = {BriefAboutMeCSS.Icon} src = {cpplogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {reactlogo} alt = "Linkedin logo" style = {{gridColumnStart: "3", gridColumnEnd: "5"}}/>
-          <img className = {BriefAboutMeCSS.Icon} src = {csslogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {reactlogo} alt = "Linkedin logo" style = {{gridColumnStart: "7", gridColumnEnd: "9"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {cpplogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {reactlogo} alt = "" style = {{gridColumnStart: "3", gridColumnEnd: "5"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {csslogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {reactlogo} alt = "" style = {{gridColumnStart: "7", gridColumnEnd: "9"}}/>
 
-          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {jslogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {htmllogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {firstLogo} alt = "Linkedin logo" style = {{gridColumnStart: "4", gridColumnEnd: "6"}}/>
-          <img className = {BriefAboutMeCSS.Icon} src = {tensorflowLogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {cpplogo} alt = "Linkedin logo"/>
+          <img className = {BriefAboutMeCSS.Icon} src = {pythonlogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {jslogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {htmllogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {firstLogo} alt = "" style = {{gridColumnStart: "4", gridColumnEnd: "6"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {tensorflowLogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {cpplogo} alt = ""/>
 
-          <img className = {BriefAboutMeCSS.Icon} src = {solidworksLogo} alt = "Linkedin logo" style = {{gridColumnStart: "1", gridColumnEnd: "3"}}/>
-          <img className = {BriefAboutMeCSS.Icon} src = {csslogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {tensorflowLogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = "Linkedin logo"/>
-          <img className = {BriefAboutMeCSS.Icon} src = {gitlogo} alt = "Linkedin logo" style = {{gridColumnStart: "7", gridColumnEnd: "9"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {solidworksLogo} alt = "" style = {{gridColumnStart: "1", gridColumnEnd: "3"}}/>
+          <img className = {BriefAboutMeCSS.Icon} src = {csslogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {tensorflowLogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {javalogo} alt = ""/>
+          <img className = {BriefAboutMeCSS.Icon} src = {gitlogo} alt = "" style = {{gridColumnStart: "7", gridColumnEnd: "9"}}/>
         </div>
         <div className= {BriefAboutMeCSS.Name}>
           <div>
-            <h1>My name is <b>Akil Pathiranage</b></h1>
+            <img className = {BriefAboutMeCSS.Photo} src = {myphoto} alt = ""/>
+            <h1>My name is Akil Pathiranage</h1>
             <p>
               I'm a Mechatronics Engineering student @ UW with a passion for SWE and ML. 
             </p>
@@ -290,7 +291,7 @@ class Project extends React.Component {
       if(linkUrl === ""){
         return null
       } else{
-        return (<a className = {ProjectCSS.projButton} href = {this.link} target = "_blank" rel = "noopener">{this.linkMessage} </a>)
+        return (<a className = {ProjectCSS.projButton} href = {this.link} target = "_blank" rel = "noopener noreferrer">{this.linkMessage} </a>)
       }
 
     }
@@ -328,7 +329,7 @@ class Links extends React.Component {
   render(){
     return (
       <div className = {LinksCSS.Links} ref = {this.ref}>
-        <a href = "https://www.linkedin.com/in/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {linkedinLogo} alt = "Linkedin logo"/></a>
+        <a href = "https://www.linkedin.com/in/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {linkedinLogo} alt = "linked in logo"/></a>
         <a href = "https://github.com/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {githubLogo} alt = "github logo" /></a>
       </div>
     )

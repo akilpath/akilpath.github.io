@@ -41,8 +41,9 @@
 
 
 .image{
-  height: 50vw;
-  width: 50vw;
+  height: 45vw;
+  width: 45vw;
+  margin: 2.5vw 2.5vw 2.5vw 2.5vw;
 }
 
 .descriptionContainer{
