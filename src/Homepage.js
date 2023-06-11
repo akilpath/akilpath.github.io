@@ -27,7 +27,6 @@ import reactlogo from "./images/languageIcons/reactlogo.png"
 import firstLogo from "./images/languageIcons/FIRSTlogo.png"
 import gitlogo from "./images/languageIcons/gitlogo.png"
 
-
 class Homepage extends React.Component {
   constructor(props){
     super(props);
@@ -47,7 +46,7 @@ class Homepage extends React.Component {
             using TensorFlow 2.0 and deployed on a RaspberryPi 3B+ through TensorFlow Lite. `}
             link = "https://github.com/akilpath/PiSecurityCamera"
             linkMessage = "See on GitHub"
-            left = {true}
+            left = {false}
         />
         <Project
             imagePath = {legoSwerve}
@@ -224,15 +223,15 @@ class Project extends React.Component {
   }
 
   inView = () => {
-    // this.imageRef.current.classList.add(ProjectCSS.imageIn);
-    // this.imageRef.current.classList.remove(ProjectCSS.imageOut);
+    this.imageRef.current.classList.add(ProjectCSS.imageIn);
+    this.imageRef.current.classList.remove(ProjectCSS.imageOut);
     this.descContainerRef.current.classList.add(ProjectCSS.descIn);
     this.descContainerRef.current.classList.remove(ProjectCSS.descOut);
   }
 
   outView = () => {
-    // this.imageRef.current.classList.remove(ProjectCSS.imageIn);
-    // this.imageRef.current.classList.add(ProjectCSS.imageOut);
+    this.imageRef.current.classList.remove(ProjectCSS.imageIn);
+    this.imageRef.current.classList.add(ProjectCSS.imageOut);
     this.descContainerRef.current.classList.remove(ProjectCSS.descIn);
     this.descContainerRef.current.classList.add(ProjectCSS.descOut);
     this.setState({displayDesc: false})
@@ -243,47 +242,31 @@ class Project extends React.Component {
       entries.forEach((entry) => {
         if (entry.isIntersecting){
           this.inView()
-        } else {
+        } else{
           this.outView()
         }
       })
     }, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.4
+      threshold: 0.5
     })
     projObserver.observe(this.bannerRef.current)
     this.outView();
   }
 
   render() {
-    if(this.left){
-      return (
-        <div className= {ProjectCSS.Banner} ref  = {this.bannerRef}>
-          <div className = {ProjectCSS.imageContainer}>
-            <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef} alt = "project" />
-          </div>
-          <div className = {ProjectCSS.descriptionContainer} ref = {this.descContainerRef}>
-            <h2 className = {ProjectCSS.projectHeader}>{this.title}</h2>
-            {this.getElements()}
-          </div>
-      </div>
-      );
-    } else {
-      return (
-        <div className= {ProjectCSS.Banner} ref  = {this.bannerRef}>
-          <div className = {ProjectCSS.descriptionContainer} ref = {this.descContainerRef}>
-            <h2 className = {ProjectCSS.projectHeader}>{this.title}</h2>
-            {this.getElements()}
-          </div>
-          <div className= {ProjectCSS.imageContainer}>
-            <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef} alt = "project" />
-          </div>
-      </div>
-      );
-    }
-
-    
+    return (
+      <div className= {ProjectCSS.Banner} ref  = {this.bannerRef}>
+        <div className = {ProjectCSS.descriptionContainer} ref = {this.descContainerRef}>
+          <h2 className = {ProjectCSS.projectHeader}>{this.title}</h2>
+          {this.getElements()}
+        </div>
+        <div className= {ProjectCSS.imageContainer}>
+          <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef} alt = "project" />
+        </div>
+    </div>
+    );
   }
 
   getElements(){

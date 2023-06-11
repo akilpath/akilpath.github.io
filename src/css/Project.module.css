@@ -44,6 +44,7 @@
   height: 45vw;
   width: 45vw;
   margin: 2.5vw 2.5vw 2.5vw 2.5vw;
+  box-shadow: black 0.75vmin 0.75vmin;
 }
 
 .descriptionContainer{
@@ -139,6 +140,7 @@
     position: relative;
     width: 100vw;
     height: 100vw;
+    z-index: 1;
   }
 
   .descriptionContainer{
@@ -148,7 +150,7 @@
     left: 12.5%;
     top: 35%;
     height: fit-content;
-    z-index: 1;
+    z-index: 4;
   }
 
   .description{
@@ -163,6 +165,28 @@
 
   .projButton{
     backdrop-filter: blur(5px);
+  }
+
+  .imageIn{
+    animation: none;
+    transform: translate(0,0);
+  }
+  
+  .imageOut{
+    animation: none;
+    transform: translate(0,0);
+  }
+  
+  .descIn{
+    animation: none;
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  .descOut{
+    animation: none;
+    transform: translate(0,0);
+    opacity: 1;
   }
 }
 
