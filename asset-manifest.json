@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.fbfbeb53.css",
-    "main.js": "/static/js/main.41dd4d14.js",
+    "main.css": "/static/css/main.2e6e9334.css",
+    "main.js": "/static/js/main.b7b73aef.js",
     "static/js/787.bbe01249.chunk.js": "/static/js/787.bbe01249.chunk.js",
-    "static/media/akilphoto.jpg": "/static/media/akilphoto.dd461d16d9ea9cd29f7f.jpg",
     "static/media/dunkirk.JPG": "/static/media/dunkirk.82da6121b3f7fd704b14.JPG",
+    "static/media/myphoto.png": "/static/media/myphoto.ee88be2b420e5f7c12a4.png",
     "static/media/securitycam.jpg": "/static/media/securitycam.fd1dba0e885428a166c3.jpg",
     "static/media/legoSwerve.jpg": "/static/media/legoSwerve.aacfbe95d4deb43d7bab.jpg",
     "static/media/reactlogo.png": "/static/media/reactlogo.5f1073661be871ad9cee.png",
@@ -16,12 +16,12 @@
     "static/media/pythonlogo.png": "/static/media/pythonlogo.de584b2121d264f2b354.png",
     "static/media/javascriptlogo.png": "/static/media/javascriptlogo.a91ca5d7d8f8fc9146f3.png",
     "index.html": "/index.html",
-    "main.fbfbeb53.css.map": "/static/css/main.fbfbeb53.css.map",
-    "main.41dd4d14.js.map": "/static/js/main.41dd4d14.js.map",
+    "main.2e6e9334.css.map": "/static/css/main.2e6e9334.css.map",
+    "main.b7b73aef.js.map": "/static/js/main.b7b73aef.js.map",
     "787.bbe01249.chunk.js.map": "/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbfbeb53.css",
-    "static/js/main.41dd4d14.js"
+    "static/css/main.2e6e9334.css",
+    "static/js/main.b7b73aef.js"
   ]
 }
