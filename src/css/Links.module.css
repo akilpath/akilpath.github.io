@@ -11,13 +11,12 @@ height: fit-content;
 
 .LinkImage{
 margin: auto;
-background-color: white;
+background-color: transparent;
 border-radius: 5px;
 width: 7vmin;
 height: 7vmin;
 margin-left: 0.5vw;
 margin-right: 0.5vw;
-border: rgb(255, 255, 255) solid 2px;
 transition-property: width, height;
 transition-duration: 0.5s;
 transition-timing-function: ease-in-out;
