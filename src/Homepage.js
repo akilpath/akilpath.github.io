@@ -46,7 +46,7 @@ class Homepage extends React.Component {
             using TensorFlow 2.0 and deployed on a RaspberryPi 3B+ through TensorFlow Lite. `}
             link = "https://github.com/akilpath/PiSecurityCamera"
             linkMessage = "See on GitHub"
-            left = {false}
+            left = {true}
         />
         <Project
             imagePath = {legoSwerve}
@@ -188,7 +188,7 @@ class BriefAboutMe extends React.Component {
         <div className= {BriefAboutMeCSS.Name}>
           <div>
             <img className = {BriefAboutMeCSS.Photo} src = {myphoto} alt = ""/>
-            <h1>My name is Akil Pathiranage</h1>
+            <h1>Akil Pathiranage</h1>
             <p>
               I'm a Mechatronics Engineering student @ UW with a passion for SWE and ML. 
             </p>
@@ -223,15 +223,15 @@ class Project extends React.Component {
   }
 
   inView = () => {
-    this.imageRef.current.classList.add(ProjectCSS.imageIn);
-    this.imageRef.current.classList.remove(ProjectCSS.imageOut);
+    // this.imageRef.current.classList.add(ProjectCSS.imageIn);
+    // this.imageRef.current.classList.remove(ProjectCSS.imageOut);
     this.descContainerRef.current.classList.add(ProjectCSS.descIn);
     this.descContainerRef.current.classList.remove(ProjectCSS.descOut);
   }
 
   outView = () => {
-    this.imageRef.current.classList.remove(ProjectCSS.imageIn);
-    this.imageRef.current.classList.add(ProjectCSS.imageOut);
+    // this.imageRef.current.classList.remove(ProjectCSS.imageIn);
+    // this.imageRef.current.classList.add(ProjectCSS.imageOut);
     this.descContainerRef.current.classList.remove(ProjectCSS.descIn);
     this.descContainerRef.current.classList.add(ProjectCSS.descOut);
     this.setState({displayDesc: false})
@@ -256,17 +256,32 @@ class Project extends React.Component {
   }
 
   render() {
-    return (
+    if(this.props.left){
+      return (
+        <div className= {ProjectCSS.Banner} ref  = {this.bannerRef}>
+          <div className = {ProjectCSS.descriptionContainer} ref = {this.descContainerRef}>
+            <h2 className = {ProjectCSS.projectHeader}>{this.title}</h2>
+            {this.getElements()}
+          </div>
+          <div className= {ProjectCSS.imageContainer}>
+            <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef} alt = "project" />
+          </div>
+      </div>
+      );
+    } else{
+      return (
       <div className= {ProjectCSS.Banner} ref  = {this.bannerRef}>
+        <div className= {ProjectCSS.imageContainer}>
+          <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef} alt = "project" />
+        </div>
         <div className = {ProjectCSS.descriptionContainer} ref = {this.descContainerRef}>
           <h2 className = {ProjectCSS.projectHeader}>{this.title}</h2>
           {this.getElements()}
         </div>
-        <div className= {ProjectCSS.imageContainer}>
-          <img className = {ProjectCSS.image} src = {this.imagePath} ref = {this.imageRef} alt = "project" />
-        </div>
+        
     </div>
     );
+    }
   }
 
   getElements(){
