@@ -1,0 +1,33 @@
+*{margin: auto; padding: 0;}
+
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(30,26,27);
+    font-family: din-condensed, sans-serif;
+}
+
+.Link{
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3vmin;
+    padding-left:2vw;
+    padding-right: 2vw;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.Link:hover{
+    background-color: black;
+    color: white;
+    border: 5px;
+}

@@ -27,6 +27,8 @@ import reactlogo from "./images/languageIcons/reactlogo.png"
 import firstLogo from "./images/languageIcons/FIRSTlogo.png"
 import gitlogo from "./images/languageIcons/gitlogo.png"
 
+import {Link} from "react-router-dom";
+
 class Homepage extends React.Component {
   constructor(props){
     super(props);
@@ -289,7 +291,7 @@ class Project extends React.Component {
       if(linkUrl === ""){
         return null
       } else{
-        return (<a className = {ProjectCSS.projButton} href = {this.link} target = "_blank" rel = "noopener noreferrer">{this.linkMessage} </a>)
+        return (<Link to = {this.link} className = {ProjectCSS.projButton}>{this.linkMessage} </Link>)
       }
 
     }

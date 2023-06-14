@@ -1,59 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Homepage from './Homepage';
-import ProjectMagnemite from './pages/ProjectMagnemite'
+import ProjectMagnemite from './pages/projMagnemite/ProjectMagnemite'
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, HashRouter, Routes, Route, createHashRouter} from "react-router-dom";
-import { Outlet, Link } from "react-router-dom";
+import NavCSS from './css/NavigationBar.module.css'
+import {HashRouter, Routes, Route, createHashRouter, Link} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-class Nav extends React.Component{
+class NavigationBar extends React.Component{
 
   constructor(props){
     super(props)
   }
 
   render() {
-
     return (
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blogs">ProjectMagnemite</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className = {NavCSS.Container}>
+        <Link to = "/" className={NavCSS.Link}>HOME</Link>
+        <Link to = "/about" className = {NavCSS.Link}>ABOUT</Link>
+        <Link to = "/proj" className={NavCSS.Link}>PROJECT</Link>
+      </div>
     )
   }
-
 }
 
-const router = createHashRouter(
-  [
-    {
-      path: "/",
-      element: <Homepage/>,
-    },
-    {
-      path: "/ProjectMagnemite",
-      element: <ProjectMagnemite />,
-    }
-  ]
-)
 
 root.render(
   <React.StrictMode>
       <HashRouter>
+        <NavigationBar />
         <Routes>
-          <Route index exact path= "/" element = {<Homepage/>}/>
-          <Route exact path = "/#proj" element = {<ProjectMagnemite/>}/>  
+          <Route index path= "/" element = {<Homepage/>}/>
+          <Route path = "/proj" element = {<ProjectMagnemite/>}/>  
         </Routes>
       </HashRouter>
   </React.StrictMode>
