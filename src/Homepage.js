@@ -55,7 +55,7 @@ class Homepage extends React.Component {
               Project Magnemite is a differential swerve drive robot created usings a Lego Mindstorms EV3 and 3D printed components. This was built by me and three other
               FRC alumni as our final project for our first year Mechatronics course.
             `}
-            link = "https://github.com/Francis-Bui/LegoSwerve"
+            link = "/proj"
             linkMessage = "See on GitHub"
             left = {false}
         />

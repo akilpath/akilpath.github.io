@@ -10,7 +10,8 @@ class ProjectMagnemite extends React.Component{
 
         return (
             <div>
-                <h1 style = {{position: 'sticky'}}>okok</h1>
+                <h1>okok</h1>
+                <h1>Comeone efdafadfa</h1>
             </div>
         )
     }

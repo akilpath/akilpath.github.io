@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Homepage from './Homepage';
 import ProjectMagnemite from './pages/ProjectMagnemite'
 import reportWebVitals from './reportWebVitals';
-import {RouterProvider, createBrowserRouter } from "react-router-dom";
+import {BrowserRouter, HashRouter, Routes, Route, createHashRouter} from "react-router-dom";
 import { Outlet, Link } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,7 +23,7 @@ class Nav extends React.Component{
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/blogs">Blogs</Link>
+            <Link to="/blogs">ProjectMagnemite</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
@@ -35,25 +35,27 @@ class Nav extends React.Component{
 
 }
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
       element: <Homepage/>,
-      children: [
-        {
-          path: "/projects/ProjectMagnemite",
-          element: <ProjectMagnemite />
-        }
-
-      ]
+    },
+    {
+      path: "/ProjectMagnemite",
+      element: <ProjectMagnemite />,
     }
   ]
 )
 
 root.render(
   <React.StrictMode>
-      <RouterProvider router = {router} />
+      <HashRouter>
+        <Routes>
+          <Route index exact path= "/" element = {<Homepage/>}/>
+          <Route exact path = "/#proj" element = {<ProjectMagnemite/>}/>  
+        </Routes>
+      </HashRouter>
   </React.StrictMode>
 );
 
