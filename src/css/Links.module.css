@@ -5,8 +5,10 @@ display: flex;
 position: relative;
 align-items: center;
 align-content: center;
-padding: 1%;
 max-width: 100%;
+min-width: 100%;
+padding-top: 1%;
+padding-bottom: 1%;
 height: auto;
 background-color: rgb(30,26,27);;
 }
