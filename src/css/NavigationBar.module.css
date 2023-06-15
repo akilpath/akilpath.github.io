@@ -1,0 +1,93 @@
+*{margin: auto; padding: 0;}
+
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-width: 100%;
+    background-color: rgb(30,26,27);
+    color: white;
+    font-family: din-condensed, sans-serif;
+}
+
+.ProjDropdown{
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    height: 100%;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3vmin;
+    padding-left:2vw;
+    padding-right: 2vw;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.ProjDropdown:hover{
+    background-color: black;
+}
+
+.ProjDropdownContent{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    background-color: rgb(30,26,27);
+    width: 100%;
+    max-width: 100%;
+    right: 0;
+    height: auto;
+    overflow: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+    z-index: 2;
+    flex-direction: column;
+}
+
+.ProjDropdown:hover .ProjDropdownContent{
+    display: flex;
+    max-width: 100%;
+}
+
+.ProjLink{
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    width: auto;
+    min-width: 100%;
+    font-size: 1.5vmax;
+    text-decoration: none;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+    font-size: auto;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+.ProjLink:hover{
+    background-color: black;
+}
+
+.Link{
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    height: 100%;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3vmin;
+    padding-left:2vw;
+    padding-right: 2vw;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.Link:hover{
+    background-color: black;
+    color: white;
+}

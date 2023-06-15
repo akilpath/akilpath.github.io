@@ -4,13 +4,14 @@ import BriefAboutMeCSS from "./css/BriefAboutMe.module.css";
 import ProjectCSS from "./css/Project.module.css";
 import LinksCSS from "./css/Links.module.css";
 
-import dunkirk from "./images/dunkirk.JPG";
-import legoSwerve from "./images/legoSwerve.jpg"
-import chessLogo from "./images/chesspluspluslogo.jpg";
+import dunkirk from "./pages/Dunkirk/dunkirk.JPG";
+import legoSwerve from "./pages/projMagnemite/legoSwerve.jpg"
+import chessLogo from "./pages/chess/chesspluspluslogo.jpg";
 import binarySortVisLogo from "./images/binarysortvislogo.jpg";
-import securityCamImg from "./images/securitycam.jpg";
+import securityCamImg from "./pages/mlsecuritycam/securitycam.jpg";
 import linkedinLogo from "./images/linkedInLogo.png";
 import githubLogo from "./images/githubLogo.png";
+import dinoGif from "./pages/dqn/dinogif.gif"
 
 import myphoto from "./images/myphoto.png"
 
@@ -27,6 +28,8 @@ import reactlogo from "./images/languageIcons/reactlogo.png"
 import firstLogo from "./images/languageIcons/FIRSTlogo.png"
 import gitlogo from "./images/languageIcons/gitlogo.png"
 
+import {Link} from "react-router-dom";
+
 class Homepage extends React.Component {
   constructor(props){
     super(props);
@@ -39,6 +42,15 @@ class Homepage extends React.Component {
     return (
       <div className={HomePageCSS.Homepage}>
         <BriefAboutMe/>
+        <Project
+            imagePath = {dinoGif} 
+            title = "DEEP Q DINO RUNNER" 
+            description = { `This Smart Security Camera uses an AI to detect whether someone is at my door or not, notifying me by text if there is. It uses a binary image classifier trained
+            using TensorFlow 2.0 and deployed on a RaspberryPi 3B+ through TensorFlow Lite. `}
+            link = "https://github.com/akilpath/PiSecurityCamera"
+            linkMessage = "See on GitHub"
+            left = {false}
+        />
         <Project
             imagePath = {securityCamImg} 
             title = "SMART CCTV" 
@@ -55,7 +67,7 @@ class Homepage extends React.Component {
               Project Magnemite is a differential swerve drive robot created usings a Lego Mindstorms EV3 and 3D printed components. This was built by me and three other
               FRC alumni as our final project for our first year Mechatronics course.
             `}
-            link = "https://github.com/Francis-Bui/LegoSwerve"
+            link = "/proj"
             linkMessage = "See on GitHub"
             left = {false}
         />
@@ -94,7 +106,6 @@ class Homepage extends React.Component {
             linkMessage = "See on GitHub"
             left = {true}
         />
-        <Links refProp = {this.linksRef}/>
       </div>
     );
   }
@@ -289,7 +300,7 @@ class Project extends React.Component {
       if(linkUrl === ""){
         return null
       } else{
-        return (<a className = {ProjectCSS.projButton} href = {this.link} target = "_blank" rel = "noopener noreferrer">{this.linkMessage} </a>)
+        return (<Link to = {this.link} className = {ProjectCSS.projButton}>{this.linkMessage} </Link>)
       }
 
     }
