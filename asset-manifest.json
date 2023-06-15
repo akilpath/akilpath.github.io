@@ -1,12 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.07734bbe.css",
-    "main.js": "/static/js/main.5dc86b3d.js",
+    "main.css": "/static/css/main.66ce75c2.css",
+    "main.js": "/static/js/main.9e5bafe6.js",
     "static/js/787.bbe01249.chunk.js": "/static/js/787.bbe01249.chunk.js",
     "static/media/dunkirk.JPG": "/static/media/dunkirk.82da6121b3f7fd704b14.JPG",
-    "static/media/myphoto.png": "/static/media/myphoto.ee88be2b420e5f7c12a4.png",
+    "static/media/dinogif.gif": "/static/media/dinogif.5420fc61336391ace343.gif",
+    "static/media/myphoto.png": "/static/media/myphoto.87b8037bb7fcdbb944ad.png",
+    "static/media/explodedView.png": "/static/media/explodedView.1745d4b6220a90c86229.png",
     "static/media/securitycam.jpg": "/static/media/securitycam.fd1dba0e885428a166c3.jpg",
     "static/media/legoSwerve.jpg": "/static/media/legoSwerve.aacfbe95d4deb43d7bab.jpg",
+    "static/media/2022 York II.png": "/static/media/2022 York II.2d22ed4f7646437d53e9.png",
+    "static/media/2022 Provincial Championship.png": "/static/media/2022 Provincial Championship.d0a215c8dcc71e6537b7.png",
+    "static/media/2022 St Mary II.png": "/static/media/2022 St Mary II.bf230564f17ad5f5588d.png",
+    "static/media/2022 Humber II.png": "/static/media/2022 Humber II.5b5a6c74a52c5b8a29ad.png",
+    "static/media/2022 York.png": "/static/media/2022 York.06f985b90cbffaffa871.png",
+    "static/media/2022 Humber.png": "/static/media/2022 Humber.4928cf8ae23b1bfac4df.png",
+    "static/media/2022 St Mary.png": "/static/media/2022 St Mary.9371a72d64c1092c382c.png",
     "static/media/reactlogo.png": "/static/media/reactlogo.5f1073661be871ad9cee.png",
     "static/media/binarysortvislogo.jpg": "/static/media/binarysortvislogo.92d7dfd7f15839117816.jpg",
     "static/media/FIRSTlogo.png": "/static/media/FIRSTlogo.42b56347357efe711f28.png",
@@ -16,12 +25,12 @@
     "static/media/pythonlogo.png": "/static/media/pythonlogo.de584b2121d264f2b354.png",
     "static/media/javascriptlogo.png": "/static/media/javascriptlogo.a91ca5d7d8f8fc9146f3.png",
     "index.html": "/index.html",
-    "main.07734bbe.css.map": "/static/css/main.07734bbe.css.map",
-    "main.5dc86b3d.js.map": "/static/js/main.5dc86b3d.js.map",
+    "main.66ce75c2.css.map": "/static/css/main.66ce75c2.css.map",
+    "main.9e5bafe6.js.map": "/static/js/main.9e5bafe6.js.map",
     "787.bbe01249.chunk.js.map": "/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.07734bbe.css",
-    "static/js/main.5dc86b3d.js"
+    "static/css/main.66ce75c2.css",
+    "static/js/main.9e5bafe6.js"
   ]
 }
