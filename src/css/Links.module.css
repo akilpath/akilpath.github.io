@@ -1,11 +1,14 @@
 
 .Links{
 margin: auto;
-margin-bottom: 3vmin;
-margin-top: 3vmin;
+display: flex;
+position: relative;
+align-items: center;
+align-content: center;
 padding: 1%;
-width: fit-content;
-height: fit-content;
+max-width: 100%;
+height: auto;
+background-color: rgb(30,26,27);;
 }
 
 

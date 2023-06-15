@@ -4,13 +4,14 @@ import BriefAboutMeCSS from "./css/BriefAboutMe.module.css";
 import ProjectCSS from "./css/Project.module.css";
 import LinksCSS from "./css/Links.module.css";
 
-import dunkirk from "./images/dunkirk.JPG";
-import legoSwerve from "./images/legoSwerve.jpg"
-import chessLogo from "./images/chesspluspluslogo.jpg";
+import dunkirk from "./pages/Dunkirk/dunkirk.JPG";
+import legoSwerve from "./pages/projMagnemite/legoSwerve.jpg"
+import chessLogo from "./pages/chess/chesspluspluslogo.jpg";
 import binarySortVisLogo from "./images/binarysortvislogo.jpg";
-import securityCamImg from "./images/securitycam.jpg";
+import securityCamImg from "./pages/mlsecuritycam/securitycam.jpg";
 import linkedinLogo from "./images/linkedInLogo.png";
 import githubLogo from "./images/githubLogo.png";
+import dinoGif from "./pages/dqn/dinogif.gif"
 
 import myphoto from "./images/myphoto.png"
 
@@ -41,6 +42,15 @@ class Homepage extends React.Component {
     return (
       <div className={HomePageCSS.Homepage}>
         <BriefAboutMe/>
+        <Project
+            imagePath = {dinoGif} 
+            title = "DEEP Q DINO RUNNER" 
+            description = { `This Smart Security Camera uses an AI to detect whether someone is at my door or not, notifying me by text if there is. It uses a binary image classifier trained
+            using TensorFlow 2.0 and deployed on a RaspberryPi 3B+ through TensorFlow Lite. `}
+            link = "https://github.com/akilpath/PiSecurityCamera"
+            linkMessage = "See on GitHub"
+            left = {false}
+        />
         <Project
             imagePath = {securityCamImg} 
             title = "SMART CCTV" 
@@ -96,7 +106,6 @@ class Homepage extends React.Component {
             linkMessage = "See on GitHub"
             left = {true}
         />
-        <Links refProp = {this.linksRef}/>
       </div>
     );
   }

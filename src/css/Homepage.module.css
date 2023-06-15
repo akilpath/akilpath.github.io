@@ -8,14 +8,7 @@
   font-family: 'Montserrat', sans-serif;
   background-color: rgb(35,31,32);
   color: black;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
 }
-
-
-
-a{
-  margin: auto;
-}
-
 

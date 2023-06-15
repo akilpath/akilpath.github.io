@@ -19,7 +19,7 @@
     color:white;
     font-size: 6vmax;
     text-shadow: black 0.2vmin 0.4vmin;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
 }
 
 .SubHeading{
@@ -52,4 +52,13 @@
     color: white;
     font-size: 2.5vmin;
     width: 70%;
+}
+
+.AwardBanner{
+    height: 50vh;
+    width: auto;
+    max-width: 100%;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    
 }
