@@ -33,7 +33,7 @@ class NavigationBar extends React.Component{
           PROJECTS
           <div className={NavCSS.ProjDropdownContent}>
             <Link to = "/DQN" className={NavCSS.ProjLink}>DEEP Q NETWORK</Link>
-            <Link to = "/proj" className={NavCSS.ProjLink}>PROJECT MAGNEMITE</Link>
+            <Link to = "/swerve" className={NavCSS.ProjLink}>PROJECT MAGNEMITE</Link>
             <Link to = "/mlsecuritycam" className={NavCSS.ProjLink}>ML SECURITY CAM</Link>
             <Link to = "/Dunkirk" className={NavCSS.ProjLink}>DUNKIRK</Link>
             <Link to = "/proj" className={NavCSS.ProjLink}>CHESS AI</Link>
@@ -64,14 +64,26 @@ class Links extends React.Component {
   }
 }
 
+class ScrollToTop extends React.Component{
+
+  componentDidUpdate(){
+    window.scrollTo(0, 0)
+    console.log("Ok")
+  }
+
+  render() {
+    return (<div></div>)
+  }
+}
 
 root.render(
   <React.StrictMode>
+      <ScrollToTop />
       <HashRouter>
         <NavigationBar />
         <Routes>
           <Route index path= "/" element = {<Homepage/>}/>
-          <Route path = "/proj" element = {<ProjectMagnemite/>}/>
+          <Route path = "/swerve" element = {<ProjectMagnemite/>}/>
           <Route path = "/DQN" element = {<DQN/>}/>
           <Route path = "/mlsecuritycam" element = {<MLCam/>}/>
           <Route path = "/Dunkirk" element = {<Dunkirk/>}/>

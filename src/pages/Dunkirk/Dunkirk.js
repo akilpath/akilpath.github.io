@@ -34,9 +34,8 @@ class Dunkirk extends React.Component{
                         height="315" 
                         src="https://www.youtube.com/embed/_PVtUcRWT0Q" 
                         title="YouTube video player" 
-                        frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen/>
+                        allowFullScreen/>
 
                 <h2 className={ProjectCSS.SubHeading}>
                     Awards
