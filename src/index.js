@@ -13,16 +13,12 @@ import LinksCSS from "./css/Links.module.css";
 import linkedinLogo from "./images/linkedInLogo.png";
 import githubLogo from "./images/githubLogo.png";
 
-import {HashRouter, Routes, Route, createHashRouter, Link} from "react-router-dom";
+import {HashRouter, Routes, Route, Link} from "react-router-dom";
 import Dunkirk from './pages/Dunkirk/Dunkirk';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 class NavigationBar extends React.Component{
-
-  constructor(props){
-    super(props)
-  }
 
   render() {
     return (
@@ -36,7 +32,6 @@ class NavigationBar extends React.Component{
             <Link to = "/swerve" className={NavCSS.ProjLink}>PROJECT MAGNEMITE</Link>
             <Link to = "/mlsecuritycam" className={NavCSS.ProjLink}>ML SECURITY CAM</Link>
             <Link to = "/Dunkirk" className={NavCSS.ProjLink}>DUNKIRK</Link>
-            <Link to = "/proj" className={NavCSS.ProjLink}>CHESS AI</Link>
           </div>
         </div>
       </div>

@@ -40,8 +40,7 @@ class ProjectMagnemite extends React.Component{
                 <p className={ProjectCSS.p}>
                     Watch the video below for a demo!
                 </p>
-                <iframe style = {{display: 'block'}}width="560" 
-                        height="315" 
+                <iframe className = {ProjectCSS.video}
                         src="https://www.youtube.com/embed/txVdN2MEguU" 
                         title="YouTube video player" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

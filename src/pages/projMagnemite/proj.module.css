@@ -53,3 +53,9 @@
     font-size: 2.5vmin;
     width: 70%;
 }
+
+.video{
+    display: block;
+    width: 50vw;
+    height: 28.12vw;
+}

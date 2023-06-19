@@ -30,8 +30,7 @@ class Dunkirk extends React.Component{
                     This robots performance was the result of the unbelievable dedication of our team and our unstoppable desire to win. The robot consisted of multiple
                     complex and robust subsystems working together. You can watch the teaser video of the robot below. 
                 </p>
-                <iframe width="560" 
-                        height="315" 
+                <iframe className={ProjectCSS.video}
                         src="https://www.youtube.com/embed/_PVtUcRWT0Q" 
                         title="YouTube video player" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

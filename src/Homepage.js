@@ -2,15 +2,12 @@ import React from 'react';
 import HomePageCSS from "./css/Homepage.module.css";
 import BriefAboutMeCSS from "./css/BriefAboutMe.module.css";
 import ProjectCSS from "./css/Project.module.css";
-import LinksCSS from "./css/Links.module.css";
 
 import dunkirk from "./pages/Dunkirk/dunkirk.JPG";
 import legoSwerve from "./pages/projMagnemite/legoSwerve.jpg"
 import chessLogo from "./pages/chess/chesspluspluslogo.jpg";
 import binarySortVisLogo from "./images/binarysortvislogo.jpg";
 import securityCamImg from "./pages/mlsecuritycam/securitycam.jpg";
-import linkedinLogo from "./images/linkedInLogo.png";
-import githubLogo from "./images/githubLogo.png";
 import dinoGif from "./pages/dqn/dinogif.gif"
 
 import myphoto from "./images/myphoto.png"
@@ -265,26 +262,6 @@ class Project extends React.Component {
     }
   }
 
-}
-
-class Links extends React.Component {
-  constructor(props){
-    super(props)
-    this.ref = React.createRef()
-  }
-
-  componentDidMount(){
-
-  }
-
-  render(){
-    return (
-      <div className = {LinksCSS.Links} ref = {this.ref}>
-        <a href = "https://www.linkedin.com/in/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {linkedinLogo} alt = "linked in logo"/></a>
-        <a href = "https://github.com/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {githubLogo} alt = "github logo" /></a>
-      </div>
-    )
-  }
 }
 
 export default Homepage;

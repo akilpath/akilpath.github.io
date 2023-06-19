@@ -19,12 +19,12 @@
     color:white;
     font-size: 6vmax;
     text-shadow: black 0.2vmin 0.4vmin;
-    margin-bottom: 3vh;
+    margin-bottom: 3vmin;
 }
 
 .SubHeading{
-    margin-top: 15vh;
-    margin-bottom: 2vh;
+    margin-top: 8vmin;
+    margin-bottom: 2vmin;
     font-family: 'Montserrat', sans-serif;
     justify-self: center;
     align-self: center;
@@ -55,10 +55,16 @@
 }
 
 .AwardBanner{
-    height: 50vh;
+    height: 50vmin;
     width: auto;
     max-width: 100%;
     margin-left: 0.5vw;
     margin-right: 0.5vw;
     
+}
+
+.video{
+    display: block;
+    width: 50vw;
+    height: 28.12vw;
 }
