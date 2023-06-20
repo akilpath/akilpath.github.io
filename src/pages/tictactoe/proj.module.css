@@ -24,8 +24,8 @@
 }
 
 .SubHeading{
-    width: 30vw;
-    height: 10vh;
+    width: 30vmax;
+    height: 10vmin;
     font-family: 'Montserrat', sans-serif;
     justify-self: center;
     align-self: center;
