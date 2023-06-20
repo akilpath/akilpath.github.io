@@ -28,6 +28,13 @@ class MLCam extends React.Component{
                 <p className={ProjectCSS.p}>Currently in this project, I've trained my first model on a dataset of over 900 images and achieved a 
                 validation accuracy of over 95%. I'm currently in the process of testing this model and collecting more images to improve the models
                 performance in different times of day, weather and environments.</p>
+
+                <p className={ProjectCSS.p}>
+                The current code is available on my {" "} 
+                <a href = "https://github.com/akilpath/PiSecurityCamera" target = "_blank" rel = "noopener noreferrer" >
+                    GitHub
+                </a>
+                </p>
             </div>
         )
     }

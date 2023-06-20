@@ -5,6 +5,7 @@ import Homepage from './Homepage';
 import ProjectMagnemite from './pages/projMagnemite/ProjectMagnemite'
 import DQN from './pages/dqn/DQN'
 import MLCam from './pages/mlsecuritycam/MLCam'
+import Tictactoe from './pages/tictactoe/tictactoe'
 
 import reportWebVitals from './reportWebVitals';
 
@@ -32,6 +33,7 @@ class NavigationBar extends React.Component{
             <Link to = "/swerve" className={NavCSS.ProjLink}>PROJECT MAGNEMITE</Link>
             <Link to = "/mlsecuritycam" className={NavCSS.ProjLink}>ML SECURITY CAM</Link>
             <Link to = "/Dunkirk" className={NavCSS.ProjLink}>DUNKIRK</Link>
+            <Link to = "/Tictactoe" className = {NavCSS.ProjLink}>TIC-TAC-TOE</Link>
           </div>
         </div>
       </div>
@@ -82,6 +84,7 @@ root.render(
           <Route path = "/DQN" element = {<DQN/>}/>
           <Route path = "/mlsecuritycam" element = {<MLCam/>}/>
           <Route path = "/Dunkirk" element = {<Dunkirk/>}/>
+          <Route path = "/Tictactoe" element = {<Tictactoe />} />
         </Routes>
         <Links/>
       </HashRouter>
