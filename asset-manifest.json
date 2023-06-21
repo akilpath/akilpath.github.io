@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.08db82e0.css",
-    "main.js": "/static/js/main.7d5d2f90.js",
+    "main.css": "/static/css/main.bac39b2f.css",
+    "main.js": "/static/js/main.a099b227.js",
     "static/js/787.bbe01249.chunk.js": "/static/js/787.bbe01249.chunk.js",
     "static/media/dunkirk.JPG": "/static/media/dunkirk.82da6121b3f7fd704b14.JPG",
     "static/media/dinogif.gif": "/static/media/dinogif.5420fc61336391ace343.gif",
     "static/media/myphoto.png": "/static/media/myphoto.87b8037bb7fcdbb944ad.png",
     "static/media/explodedView.png": "/static/media/explodedView.1745d4b6220a90c86229.png",
     "static/media/securitycam.jpg": "/static/media/securitycam.fd1dba0e885428a166c3.jpg",
+    "static/media/training_accuracy.png": "/static/media/training_accuracy.4534708a8d3bc9acd832.png",
     "static/media/legoSwerve.jpg": "/static/media/legoSwerve.aacfbe95d4deb43d7bab.jpg",
     "static/media/2022 York II.png": "/static/media/2022 York II.2d22ed4f7646437d53e9.png",
     "static/media/2022 Provincial Championship.png": "/static/media/2022 Provincial Championship.d0a215c8dcc71e6537b7.png",
@@ -25,12 +26,12 @@
     "static/media/pythonlogo.png": "/static/media/pythonlogo.de584b2121d264f2b354.png",
     "static/media/javascriptlogo.png": "/static/media/javascriptlogo.a91ca5d7d8f8fc9146f3.png",
     "index.html": "/index.html",
-    "main.08db82e0.css.map": "/static/css/main.08db82e0.css.map",
-    "main.7d5d2f90.js.map": "/static/js/main.7d5d2f90.js.map",
+    "main.bac39b2f.css.map": "/static/css/main.bac39b2f.css.map",
+    "main.a099b227.js.map": "/static/js/main.a099b227.js.map",
     "787.bbe01249.chunk.js.map": "/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.08db82e0.css",
-    "static/js/main.7d5d2f90.js"
+    "static/css/main.bac39b2f.css",
+    "static/js/main.a099b227.js"
   ]
 }
