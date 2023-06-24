@@ -4,11 +4,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
-    min-width: 100%;
+    width: 100%;
     background-color: rgb(30,26,27);
     color: white;
     font-family: din-condensed, sans-serif;
+    font-size: 4vmin;
+    z-index: 5;
 }
 
 .ProjDropdown{
@@ -19,7 +20,6 @@
     width: auto;
     text-align: center;
     text-decoration: none;
-    font-size: 3vmin;
     padding-left:2vw;
     padding-right: 2vw;
     transition: all 0.5s;
@@ -80,7 +80,6 @@
     width: auto;
     text-align: center;
     text-decoration: none;
-    font-size: 3vmin;
     padding-left:2vw;
     padding-right: 2vw;
     transition: all 0.5s;
