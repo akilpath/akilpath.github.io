@@ -27,61 +27,52 @@ import gitlogo from "./images/languageIcons/gitlogo.png"
 
 import {Link} from "react-router-dom";
 
-class Homepage extends React.Component {
-  constructor(props){
-    super(props);
-    this.briefAboutMeRef = React.createRef();
-    this.linksRef = React.createRef()
-    this.state = {visible: false};
-  }
-
-  render(){
-    return (
-      <div className={HomePageCSS.Homepage}>
-        <BriefAboutMe/>
-        <Project
-            imagePath = {dinoGif} 
-            title = "DEEP Q DINO RUNNER" 
-            description = { `This Smart Security Camera uses an AI to detect whether someone is at my door or not, notifying me by text if there is. It uses a binary image classifier trained
-            using TensorFlow 2.0 and deployed on a RaspberryPi 3B+ through TensorFlow Lite. `}
-            link = "/DQN"
-            linkMessage = "See on GitHub"
-            left = {false}
-        />
-        <Project
-            imagePath = {securityCamImg} 
-            title = "SMART CCTV" 
-            link = "/mlsecuritycam"
-            left = {true}
-        />
-        <Project
-            imagePath = {legoSwerve}
-            title = "PROJECT MAGNEMITE"
-            link = "/swerve"
-            left = {false}
-        />
-        <Project 
-            imagePath = {dunkirk}
-            title = "DUNKIRK"
-            link = "/Dunkirk"
-            left = {true}
-        
-        />
-        <Project 
-            imagePath = {chessLogo} 
-            title = "CHESS PLUS PLUS" 
-            link = "https://github.com/HDSB-GWS-Brooks-202122-ICS4-01/Chess-Plus-Plus"
-            left = {false}
-        />
-        <Project 
-            imagePath = {binarySortVisLogo} 
-            title = "BINARY SORT VISUALIZATION" 
-            link = "https://github.com/akilpath/Binary-Search-Tree-Visualization"
-            left = {true}
-        />
-      </div>
-    );
-  }
+function Homepage(){
+  return (
+    <div className={HomePageCSS.Homepage}>
+      <BriefAboutMe/>
+      <Project
+          imagePath = {dinoGif} 
+          title = "DEEP Q DINO RUNNER" 
+          description = { `This Smart Security Camera uses an AI to detect whether someone is at my door or not, notifying me by text if there is. It uses a binary image classifier trained
+          using TensorFlow 2.0 and deployed on a RaspberryPi 3B+ through TensorFlow Lite. `}
+          link = "/DQN"
+          linkMessage = "See on GitHub"
+          left = {false}
+      />
+      <Project
+          imagePath = {securityCamImg} 
+          title = "SMART CCTV" 
+          link = "/mlsecuritycam"
+          left = {true}
+      />
+      <Project
+          imagePath = {legoSwerve}
+          title = "PROJECT MAGNEMITE"
+          link = "/swerve"
+          left = {false}
+      />
+      <Project 
+          imagePath = {dunkirk}
+          title = "DUNKIRK"
+          link = "/Dunkirk"
+          left = {true}
+      
+      />
+      <Project 
+          imagePath = {chessLogo} 
+          title = "CHESS PLUS PLUS" 
+          link = "https://github.com/HDSB-GWS-Brooks-202122-ICS4-01/Chess-Plus-Plus"
+          left = {false}
+      />
+      <Project 
+          imagePath = {binarySortVisLogo} 
+          title = "BINARY SORT VISUALIZATION" 
+          link = "https://github.com/akilpath/Binary-Search-Tree-Visualization"
+          left = {true}
+      />
+    </div>
+  );
 }
 
 class BriefAboutMe extends React.Component {

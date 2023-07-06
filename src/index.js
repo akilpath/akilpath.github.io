@@ -19,11 +19,10 @@ import Dunkirk from './pages/Dunkirk/Dunkirk';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //testss
-class NavigationBar extends React.Component{
 
-  render() {
-    return (
-      <div className = {NavCSS.Container}>
+function NavigationBar() {
+  return (
+    <div className = {NavCSS.Container}>
         <Link to = "/" className={NavCSS.Link}>HOME</Link>
         {/* <Link to = "/about" className = {NavCSS.Link}>ABOUT</Link> */}
         <div className={NavCSS.ProjDropdown}>
@@ -37,28 +36,16 @@ class NavigationBar extends React.Component{
           </div>
         </div>
       </div>
-    )
-  }
+  )
 }
 
-class Links extends React.Component {
-  constructor(props){
-    super(props)
-    this.ref = React.createRef()
-  }
-
-  componentDidMount(){
-
-  }
-
-  render(){
-    return (
-      <div className = {LinksCSS.Links} ref = {this.ref}>
-        <a href = "https://www.linkedin.com/in/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {linkedinLogo} alt = "linked in logo"/></a>
-        <a href = "https://github.com/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {githubLogo} alt = "github logo" /></a>
-      </div>
-    )
-  }
+function Links(){
+  return (
+    <div className = {LinksCSS.Links}>
+      <a href = "https://www.linkedin.com/in/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {linkedinLogo} alt = "linked in logo"/></a>
+      <a href = "https://github.com/akilpath" target = "_blank" rel = "noopener noreferrer"><img className = {LinksCSS.LinkImage} src = {githubLogo} alt = "github logo" /></a>
+    </div>
+  )
 }
 
 class ScrollToTop extends React.Component{
