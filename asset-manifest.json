@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.85b3a956.css",
-    "main.js": "/static/js/main.a34537f3.js",
+    "main.js": "/static/js/main.4e886c2f.js",
     "static/js/787.bbe01249.chunk.js": "/static/js/787.bbe01249.chunk.js",
     "static/media/dunkirk.JPG": "/static/media/dunkirk.82da6121b3f7fd704b14.JPG",
     "static/media/dinogif.gif": "/static/media/dinogif.5420fc61336391ace343.gif",
@@ -27,11 +27,11 @@
     "static/media/javascriptlogo.png": "/static/media/javascriptlogo.a91ca5d7d8f8fc9146f3.png",
     "index.html": "/index.html",
     "main.85b3a956.css.map": "/static/css/main.85b3a956.css.map",
-    "main.a34537f3.js.map": "/static/js/main.a34537f3.js.map",
+    "main.4e886c2f.js.map": "/static/js/main.4e886c2f.js.map",
     "787.bbe01249.chunk.js.map": "/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.85b3a956.css",
-    "static/js/main.a34537f3.js"
+    "static/js/main.4e886c2f.js"
   ]
 }
