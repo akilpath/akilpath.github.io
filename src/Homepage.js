@@ -42,7 +42,7 @@ function Homepage() {
           <p className={styles.kicker}>AI Enthusiast</p>
           <h1 className={styles.title}>Akil Pathiranage</h1>
           <p className={styles.description}>
-            Hi my name is Akil. I'm studying mechatronics at UW with a focus on AI. I'm passionate about ml with experience across NLP, computer vision, and robotics. I enjoy exploring how learning systems can solve real-world problems.
+            Hi, my name is Akil. I'm studying mechatronics at UW with a focus on AI. I'm passionate about ML with experience across NLP, computer vision, and robotics. I enjoy exploring how learning systems can solve real-world problems.
           </p>
           <div className={styles.links}>
             {socialLinks.map((link) => (
@@ -59,17 +59,8 @@ function Homepage() {
             ))}
           </div>
         </div>
-        <img className={styles.photo} src={myphoto} alt="Akil Pathiranage" />
+        <img className={styles.photo} src={myphoto} alt="Akil Pathiranage" width="2500" height="2500" />
       </header>
-
-      {/* <section className={styles.section}>
-        <div className={styles.card}>
-          <h2>About</h2>
-          <p>
-            I am a mechatronics engineer and researcher specializing in applied machine learning and embedded perception. I develop robust algorithms for autonomous agents that sense complex environments and act with confidence.
-          </p>
-        </div>
-      </section> */}
 
       <section className={styles.gridSection}>
         <div className={styles.card}>
@@ -131,7 +122,7 @@ function Homepage() {
       </section>
 
       <footer className={styles.footer}>
-        <p>Feel free to reach out to me on LinkedIn!</p>
+        <p>Feel free to reach out to me on <a href="https://www.linkedin.com/in/akilpath" target="_blank" rel="noopener noreferrer">LinkedIn</a>!</p>
       </footer>
     </main>
   );
